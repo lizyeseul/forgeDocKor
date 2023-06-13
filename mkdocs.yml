@@ -97,8 +97,8 @@ nav:
     - Porting to This Version: 'legacy/porting.md'
 
 # Do not edit in PRs below here
-site_name: Forge Documentation
-site_url: https://docs.minecraftforge.net/en/1.19.x/
+site_name: Forge modding 한글 문서
+site_url: https://forgedockor.readthedocs.io/
 
 markdown_extensions:
   - admonition
@@ -123,6 +123,10 @@ extra:
   versions:
     1.18.x: 1.18.x
     1.19.x: 1.19.x
+    main: main
 
 extra_css:
   - css/version_warning_fix.css
+
+hooks:
+  - pre_build.py

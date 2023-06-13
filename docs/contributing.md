@@ -1,39 +1,51 @@
-Contributing to This Documentation
+[Contributing] 이 문서에 기여하기
 ==================================
 
-You can make a contribution via a PR on [GitHub].
+이 문서는 설명서입니다. 어떻게 하는지 설명하고 적당한 범주로 나눠주세요.  
+다른곳에 더 많은 코드 예제를 보여줄수 있는 위키도 있습니다.  
 
-This documentation is meant to be explanatory. Please explain how to do things, and break it down into reasonable chunks.
-We have a wiki elsewhere that can capture more comprehensive code examples.
 
-Our audience is anyone who wants to understand how to build a mod using Forge.
+이 문서를 읽을 사람은 Forge를 통해 어떻게 모드를 만드는지 알고 싶은 사람들입니다.  
+이 문서를 자바 개발 튜토리얼 문서로 바꾸지 마세요. - 자바 튜토리얼 문서는 JAVA 클래스와 기능적인 구조가 어떻게 동작하는지 이해하고 싶어한는 사람들을 위한 문서입니다.
 
-Please don't try to turn this documentation into a tutorial on Java Development - it is intended for people who understand how a Java class works, and other fundamental structures of Java.
 
-Style Guide
+
+[Style Guide] 스타일 가이드
 -----------
 
-!!! important
-    Please use **two spaces** to indent, not tabs.
+!!! 중요
+    줄바꿈을 위해 '탭'이 아니라 **두개의 공백(space 두 번)**을 사용하세요.
 
-Titles should be capitalized in the standard titling format. For example,
 
+제목들은 대문자로 시작하는 표준 제목 형식을 따라야 합니다.(공식 영문판 기준)  
+예)  
 * Guide For Contributing to This Documentation
 * Building and Testing Your Mod
 
-Essentially, capitalize everything but unimportant words.
 
-Spelling, grammar, and syntax should follow those of American English. Also, prefer using separate words over contractions (e.g. "are not" instead of "aren't").
+특히, 모든 단어를 대문자로 시작하되 중요하지 않은 단어(관사 등)는 제외합니다.  
+철자, 문법, 문맥은 미국 영어 기준입니다. 그리고 단어를 줄임말 대신 풀어서 써주세요.  
+예) "are not" O, "aren't" X  
 
-Please use equals and dash underlines, instead of `#` and `##`. For h3 and lower, `###` etc. is fine. The source of this file contains an example for equals and dash underlining. Equals underlines create h1 text, and dash underlines create h2 text.
 
-When referencing fields and methods outside of code block snippets, they should use a `#` separator (e.g. `ClassName#methodName`). Inner classes should use a `$` separator (e.g. `ClassName$InnerClassName`).
+'#'(=h1)대신 '='를, '##'(=h2)대신 '-'를 사용하세요.  
+h3 이하에서 '###' 등을 사용하는 건 괜찮습니다.  
+이 파일의 소스에는 '='과 '-'의 예제 코드가 있습니다. '=' 줄은 h1 텍스트, '-' 줄은 h2 텍스트를 표시합니다.  
+(git에서 docs 폴더 밑의 md 파일들을 참고하면 됩니다.)
 
-JSON code block snippets should use `js` syntax highlighting.
 
-All links should have their location specified at the bottom of the page. Any internal links should reference the page via their relative path.
+코드 영역 스니펫 바깥의 영역이나 함수를 참고할 때, '#' 구분자 (예. `ClassName#methodName`)를 사용해야 합니다.  
+안쪽의 class들은 '$' 구분자를 사용해야 합니다.(예. `ClassName$InnerClassName`)  
 
-Admonitions (represented by `!!! <type>`) must be formatted as [documented][admonition]; otherwise they may end up rendering incorrectly.
+JSON 코드 영역 스니펫은 `js` 구문 강조를 사용합니다.  
 
-[GitHub]: https://github.com/MinecraftForge/Documentation
+모든 링크는 페이지 아래에 구체적인 링크를 명시해야 합니다. 모든 내부 링크는 상대경로를 통해 참조합니다.  
+
+`!!! <type>`로 표시되는 Admonition들은 [documented][admonition]; 형식으로 표시되어야 합니다. 그렇지 않으면 랜더링이 잘못될 수 있습니다.  
+(이 페이지의 '중요-줄바꿈~사용하세요' 부분)
+
+
+
+
+
 [admonition]: https://python-markdown.github.io/extensions/admonition/

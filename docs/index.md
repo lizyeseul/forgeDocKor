@@ -1,11 +1,11 @@
-MinecraftForge Documentation
+MinecraftForge 문서
 ============================
 
-This is the official documentation for [MinecraftForge], the Minecraft modding API.
+이 문서는 비공식적인 마인크래프트 modding API인 [MinecraftForge]의 한글 문서입니다.
 
-This documentation is _only_ for Forge, **this is not a Java tutorial**.
+이 문서는 _오직_ Forge에 관한 것이며, **Java 튜토리얼이 아닙니다**.
 
-If you would like to contribute to the docs, read [Contributing to the Docs][contributing].
+[GitHub]에서 문서에 기여하세요.
 
 [MinecraftForge]: http://minecraftforge.net
-[contributing]: ./contributing.md
+[GitHub]: https://github.com/MinecraftForge/Documentation
