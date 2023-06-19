@@ -2,7 +2,7 @@
 
 # Do not edit in PRs below here
 site_name: Forge modding 비공식 한글 문서
-site_url: https://lizyeseul.github.io/forgeDocKor/
+site_url: https://lizyeseul.github.io/forgeDocKor/ko
 
 markdown_extensions:
   - admonition
