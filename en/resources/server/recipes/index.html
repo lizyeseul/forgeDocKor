@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="recipes">Recipes<a class="headerlink" href="#recipes" title="Permanent link"> </a></h1>
+<p>Recipes are a way to transform some number of objects into other objects within a Minecraft world. Although the vanilla system deals purely with item transformations, the system as a whole can be expanded to use any object the programmer creates.</p>
+<h2 id="data-driven-recipes">Data-Driven Recipes<a class="headerlink" href="#data-driven-recipes" title="Permanent link"> </a></h2>
+<p>Most recipe implementations within vanilla are data driven via JSON. This means that a mod is not necessary to create a new recipe, only a <a href="https://minecraft.fandom.com/wiki/Data_pack">Data pack</a>. A full list on how to create and put these recipes within the mod&rsquo;s <code>resources</code> folder can be found on the <a href="https://minecraft.fandom.com/wiki/Recipe">Minecraft Wiki</a>.</p>
+<p>A recipe can be obtained within the Recipe Book as a reward for completing an <a href="../advancements/">advancement</a>. Recipe advancements always have <code>minecraft:recipes/root</code> as their parent, to not to appear on the advancement screen. The default criteria to gain the recipe advancement is a check if the user has unlocked the recipe from using it once or receiving it through a command like <code>/recipe</code>:</p>
+<pre class="highlight"><code class="language-js">// Within some recipe advancement json
+"has_the_recipe": { // Criteria label
+  // Succeeds if examplemod:example_recipe is used
+  "trigger": "minecraft:recipe_unlocked",
+  "conditions": {
+    "recipe": "examplemod:example_recipe"
+  }
+}
+//...
+"requirements": [
+  [
+    "has_the_recipe"
+    // ... Other criteria labels to be ORed against to unlock recipe
+  ]
+]</code></pre>
+<p>Data-driven recipes and their unlocking advancement can be <a href="../../../datagen/server/recipes/">generated</a> via <code>RecipeProvider</code>.</p>
+<h2 id="recipe-manager">Recipe Manager<a class="headerlink" href="#recipe-manager" title="Permanent link"> </a></h2>
+<p>Recipes are loaded and stored via the <code>RecipeManager</code>. Any operations relating to getting available recipe(s) are handled by this manager. There are two important methods to know of:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>getRecipeFor</code></td>
+<td align="left">Gets the first recipe that matches the current input.</td>
+</tr>
+<tr>
+<td align="center"><code>getRecipesFor</code></td>
+<td align="left">Gets all recipes that match the current input.</td>
+</tr>
+</tbody>
+</table>
+<p>Each method takes in a <code>RecipeType</code>, which denotes what method is being applied to use the recipe (crafting, smelting, etc.), a <code>Container</code> which holds the configuration of the inputs, and the current level which is passed to <code>Recipe#matches</code> along with the container.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Forge provides the <code>RecipeWrapper</code> utility class which extends <code>Container</code> for wrapping around <code>IItemHandler</code>s and passing them to methods which requires a <code>Container</code> parameter.</p>
+<pre class="highlight"><code class="language-java">// Within some method with IItemHandlerModifiable handler
+recipeManger.getRecipeFor(RecipeType.CRAFTING, new RecipeWrapper(handler), level);</code></pre>
+</div>
+<h2 id="additional-features">Additional Features<a class="headerlink" href="#additional-features" title="Permanent link"> </a></h2>
+<p>Forge provides some additional behavior to the recipe schema and its implementations for greater control of the system.</p>
+<h3 id="recipe-itemstack-result">Recipe ItemStack Result<a class="headerlink" href="#recipe-itemstack-result" title="Permanent link"> </a></h3>
+<p>Except for <code>minecraft:stonecutting</code> recipes, all vanilla recipe serializers expand the <code>result</code> tag to take in a full <code>ItemStack</code> as a <code>JsonObject</code> instead of just the item name and amount in some cases.</p>
+<pre class="highlight"><code class="language-js">// In some recipe JSON
+"result": {
+  // The name of the registry item to give as a result
+  "item": "examplemod:example_item",
+  // The number of items to return
+  "count": 4,
+  // The tag data of the stack, can also be a string
+  "nbt": {
+      // Add tag data here
+  }
+}</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>nbt</code> tag can alternatively be a string containing a stringified NBT (or SNBT) for data which cannot be properly represented as a JSON object (such as <code>IntArrayTag</code>s).</p>
+</div>
+<h3 id="conditional-recipes">Conditional Recipes<a class="headerlink" href="#conditional-recipes" title="Permanent link"> </a></h3>
+<p>Recipes and their unlocking advancement can be <a href="../conditional/#implementations">loaded conditionally and defaulted</a> depending on what information is present (mod loaded, item exists, etc.).</p>
+<h3 id="larger-crafting-grids">Larger Crafting Grids<a class="headerlink" href="#larger-crafting-grids" title="Permanent link"> </a></h3>
+<p>By default, vanilla declares a maximum width and height for a crafting grid to be a 3x3 square. This can be expanded by calling <code>ShapedRecipe#setCraftingSize</code> with the new width and height in <code>FMLCommonSetupEvent</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>ShapedRecipe#setCraftingSize</code> is <strong>NOT</strong> thread-safe. As such, it should be enqueued to the synchronous work queue via <code>FMLCommonSetupEvent#enqueueWork</code>.</p>
+</div>
+<p>Larger crafting grids in recipes can be <a href="../../../datagen/server/recipes/">data generated</a>.</p>
+<h3 id="ingredient-types">Ingredient Types<a class="headerlink" href="#ingredient-types" title="Permanent link"> </a></h3>
+<p>A few additional <a href="ingredients/#forge-types">ingredient types</a> are added to allow recipes to have inputs which check tag data or combine multiple ingredients into a single input checker.</p>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Datapackregistries - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="datapack-registry-object-generation">Datapack Registry Object Generation<a class="headerlink" href="#datapack-registry-object-generation" title="Permanent link"> </a></h1>
+<p>Datapack registry objects can be generated for a mod by constructing a new <code>DatapackBuiltinEntriesProvider</code> and providing a <code>RegistrySetBuilder</code> with the new objects to register. The provider must be <a href="../../#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>DatapackBuiltinEntriesProvider</code> is a Forge extension on top of <code>RegistriesDatapackGenerator</code> which properly handles referencing existing datapack registry objects without exploding the entry. So, this documentation will use <code>DatapackBuiltinEntriesProvider</code>.</p>
+</div>
+<pre class="highlight"><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when server data are generating
+        event.includeServer(),
+        output -&gt; new DatapackBuiltinEntriesProvider(
+          output,
+          event.getLookupProvider(),
+          // The builder containing the datapack registry objects to generate
+          new RegistrySetBuilder().add(/* ... */),
+          // Set of mod ids to generate the datapack registry objects of
+          Set.of(MOD_ID)
+        )
+    );
+}</code></pre>
+<h2 id="registrysetbuilder"><code>RegistrySetBuilder</code><a class="headerlink" href="#registrysetbuilder" title="Permanent link"> </a></h2>
+<p>A <code>RegistrySetBuilder</code> is responsible for building all datapack registry objects to be used within the game. The builder can add a new entry for a registry, which can then register objects to that registry.</p>
+<p>First, a new instance of a <code>RegistrySetBuilder</code> can be initialized by calling the constructor. Then, the <code>#add</code> method (which takes in the <code>ResourceKey</code> of the registry, a <code>RegistryBootstrap</code> consumer containing the <code>BootstapContext</code> to register the objects, and an optional <code>Lifecycle</code> argument to indicate the registry&rsquo;s current lifecycle status) can be called to handle a specific registry for registration.</p>
+<pre class="highlight"><code class="language-java">new RegistrySetBuilder()
+  // Create configured features
+  .add(Registries.CONFIGURED_FEATURE, bootstrap -&gt; {
+    // Register configured features here
+  })
+  // Create placed features
+  .add(Registries.PLACED_FEATURE, bootstrap -&gt; {
+    // Register placed features here
+  });</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Datapack registries created through Forge can also generate their objects using this builder by also passing in the associated <code>ResourceKey</code>.</p>
+</div>
+<h2 id="registering-with-bootstapcontext">Registering with <code>BootstapContext</code><a class="headerlink" href="#registering-with-bootstapcontext" title="Permanent link"> </a></h2>
+<p>The <code>#register</code> method in the <code>BootstapContext</code> provided by the builder can be used to register objects. It takes in the <code>ResourceKey</code> representing the registry name of the object, the object to register, and an optional <code>Lifecycle</code> argument to indicate the registry object&rsquo;s current lifecycle status. </p>
+<pre class="highlight"><code class="language-java">public static final ResourceKey&lt;ConfiguredFeature&lt;?, ?&gt;&gt; EXAMPLE_CONFIGURED_FEATURE = ResourceKey.create(
+  Registries.CONFIGURED_FEATURE,
+  new ResourceLocation(MOD_ID, "example_configured_feature")
+);
+
+// In some constant location or argument
+new RegistrySetBuilder()
+  // Create configured features
+  .add(Registries.CONFIGURED_FEATURE, bootstrap -&gt; {
+    // Register configured features here
+    bootstrap.register(
+      // The resource key for the configured feature
+      EXAMPLE_CONFIGURED_FEATURE,
+      new ConfiguredFeature&lt;&gt;(
+        Feature.ORE, // Create an ore feature
+        new OreConfiguration(
+          List.of(), // Does nothing
+          8 // in veins of at most 8
+        )
+      )
+    );
+  })
+  // Create placed features
+  .add(Registries.PLACED_FEATURE, bootstrap -&gt; {
+    // Register placed features here
+  });</code></pre>
+<h3 id="datapack-registry-object-lookup">Datapack Registry Object Lookup<a class="headerlink" href="#datapack-registry-object-lookup" title="Permanent link"> </a></h3>
+<p>Sometimes datapack registry objects may want to use other datapack registry objects or tags containing datapack registry objects. In those cases, you can look up another datapack registry using <code>BootstapContext#lookup</code> to get a <code>HolderGetter</code>. From there, you can get a <code>Holder$Reference</code> to the datapack registry object or a <code>HolderSet$Named</code> for the tag via <code>#getOrThrow</code> by passing in the associated key.</p>
+<pre class="highlight"><code class="language-java">public static final ResourceKey&lt;ConfiguredFeature&lt;?, ?&gt;&gt; EXAMPLE_CONFIGURED_FEATURE = ResourceKey.create(
+  Registries.CONFIGURED_FEATURE,
+  new ResourceLocation(MOD_ID, "example_configured_feature")
+);
+
+public static final ResourceKey&lt;PlacedFeature&gt; EXAMPLE_PLACED_FEATURE = ResourceKey.create(
+  Registries.PLACED_FEATURE,
+  new ResourceLocation(MOD_ID, "example_placed_feature")
+);
+
+// In some constant location or argument
+new RegistrySetBuilder()
+  // Create configured features
+  .add(Registries.CONFIGURED_FEATURE, bootstrap -&gt; {
+    // Register configured features here
+    bootstrap.register(
+      // The resource key for the configured feature
+      EXAMPLE_CONFIGURED_FEATURE,
+      new ConfiguredFeature(/* ... */)
+    );
+  })
+  // Create placed features
+  .add(Registries.PLACED_FEATURE, bootstrap -&gt; {
+    // Register placed features here
+
+    // Get configured feature registry
+    HolderGetter&lt;ConfiguredFeature&lt;?, ?&gt;&gt; configured = bootstrap.lookup(Registries.CONFIGURED_FEATURE);
+
+    bootstrap.register(
+      // The resource key for the placed feature
+      EXAMPLE_PLACED_FEATURE,
+      new PlacedFeature(
+        configured.getOrThrow(EXAMPLE_CONFIGURED_FEATURE), // Get the configured feature
+        List.of() // and do nothing to the placement location
+      )
+    )
+  });</code></pre>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

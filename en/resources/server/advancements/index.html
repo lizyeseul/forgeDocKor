@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advancements - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="advancements">Advancements<a class="headerlink" href="#advancements" title="Permanent link"> </a></h1>
+<p>Advancements are tasks that can be achieved by the player which may advance the progress of the game. Advancements can trigger based on any action the player may be directly involved in.</p>
+<p>All advancement implementations within vanilla are data driven via JSON. This means that a mod is not necessary to create a new advancement, only a <a href="https://minecraft.fandom.com/wiki/Data_pack">data pack</a>. A full list on how to create and put these advancements within the mod&rsquo;s <code>resources</code> can be found on the <a href="https://minecraft.fandom.com/wiki/Advancement/JSON_format">Minecraft Wiki</a>. Additionally, advancements can be <a href="../conditional/#implementations">loaded conditionally and defaulted</a> depending on what information is present (mod loaded, item exists, etc.).</p>
+<h2 id="advancement-criteria">Advancement Criteria<a class="headerlink" href="#advancement-criteria" title="Permanent link"> </a></h2>
+<p>To unlock an advancement, the specified criteria must be met. Criteria are tracked through triggers which execute when a certain action is performed: killing an entity, changing an inventory, breading animals, etc. Any time an advancement is loaded into the game, the criteria defined are read and added as listeners to the trigger. Afterwards a trigger function is called (usually named <code>#trigger</code>) which checks all listeners as to whether the current state meets the conditions of the advancement criteria. The criteria listeners for the advancement are only removed once the advancement has been obtained by completing all requirements.</p>
+<p>Requirements are defined as an array of string arrays representing the name of the criteria specified on the advancement. An advancement is completed once one string array of criteria has been met:</p>
+<pre class="highlight"><code class="language-js">// In some advancement JSON
+
+// List of defined criteria to meet
+"criteria": {
+  "example_criterion1": { /*...*/ },
+  "example_criterion2": { /*...*/ },
+  "example_criterion3": { /*...*/ },
+  "example_criterion4": { /*...*/ }
+},
+
+// This advancement is only unlocked once
+// - Criteria 1 AND 2 have been met
+// OR
+// - Criteria 3 and 4 have been met
+"requirements": [
+  [
+    "example_criterion1",
+    "example_criterion2"
+  ],
+  [
+    "example_criterion3",
+    "example_criterion4"
+  ]
+]</code></pre>
+<p>A list of criteria triggers defined by vanilla can be found in <code>CriteriaTriggers</code>. Additionally, the JSON formats are defined on the <a href="https://minecraft.fandom.com/wiki/Advancement/JSON_format#List_of_triggers">Minecraft Wiki</a>.</p>
+<h3 id="custom-criteria-triggers">Custom Criteria Triggers<a class="headerlink" href="#custom-criteria-triggers" title="Permanent link"> </a></h3>
+<p>Custom criteria triggers can be created by implementing <code>SimpleCriterionTrigger</code> for the created <code>AbstractCriterionTriggerInstance</code> subclass.</p>
+<h3 id="abstractcriteriontriggerinstance-subclass">AbstractCriterionTriggerInstance Subclass<a class="headerlink" href="#abstractcriteriontriggerinstance-subclass" title="Permanent link"> </a></h3>
+<p>The <code>AbstractCriterionTriggerInstance</code> represents a single criteria defined in the <code>criteria</code> object. Trigger instances are responsible for holding the defined conditions, returning whether the inputs match the condition, and writing the instance to JSON for data generation.</p>
+<p>Conditions are usually passed in through the constructor. The <code>AbstractCriterionTriggerInstance</code> super constructor requires the instance to define the registry name of the trigger and the conditions the player must meet as an <code>EntityPredicate$Composite</code>. The registry name of the trigger should be supplied to the super directly while the conditions of the player should be a constructor parameter.</p>
+<pre class="highlight"><code class="language-java">// Where ID is the registry name of the trigger
+public ExampleTriggerInstance(EntityPredicate.Composite player, ItemPredicate item) {
+  super(ID, player);
+  // Store the item condition that must be met
+}</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typically, trigger instances have a static constructor which allow these instances to be easily created for data generation. These static factory methods can also be statically imported instead of the class itself.</p>
+<pre class="highlight"><code class="language-java">public static ExampleTriggerInstance instance(EntityPredicate.Builder playerBuilder, ItemPredicate.Builder itemBuilder) {
+  return new ExampleTriggerInstance(EntityPredicate.Composite.wrap(playerBuilder.build()), itemBuilder.build());
+}</code></pre>
+</div>
+<p>Additionally, the <code>#serializeToJson</code> method should be overridden. The method should add the conditions of the instance to the other JSON data.</p>
+<pre class="highlight"><code class="language-java">@Override
+public JsonObject serializeToJson(SerializationContext context) {
+  JsonObject obj = super.serializeToJson(context);
+  // Write conditions to json
+  return obj;
+}</code></pre>
+<p>Finally, a method should be added which takes in the current data state and returns whether the user has met the necessary conditions. The conditions of the player are already checked through <code>SimpleCriterionTrigger#trigger(ServerPlayer, Predicate)</code>. Most trigger instances call this method <code>#matches</code>.</p>
+<pre class="highlight"><code class="language-java">// This method is unique for each instance and is as such not overridden
+public boolean matches(ItemStack stack) {
+  // Since ItemPredicate matches a stack, a stack is the input
+  return this.item.matches(stack);
+}</code></pre>
+<h3 id="simplecriteriontrigger">SimpleCriterionTrigger<a class="headerlink" href="#simplecriteriontrigger" title="Permanent link"> </a></h3>
+<p>The <code>SimpleCriterionTrigger&lt;T&gt;</code> subclass, where <code>T</code> is the type of the trigger instance, is responsible for specifying the registry name of the trigger, creating a trigger instance, and a method to check trigger instances and run attached listeners on success.</p>
+<p>The registry name of the trigger is supplied to <code>#getId</code>. This should match the registry name supplied to the trigger instance.</p>
+<p>A trigger instance is created via <code>#createInstance</code>. This method reads a criteria from JSON.</p>
+<pre class="highlight"><code class="language-java">@Override
+public ExampleTriggerInstance createInstance(JsonObject json, EntityPredicate.Composite player, DeserializationContext context) {
+  // Read conditions from JSON: item
+  return new ExampleTriggerInstance(player, item);
+}</code></pre>
+<p>Finally, a method is defined to check all trigger instances and run the listeners if their condition is met. This method takes in the <code>ServerPlayer</code> and whatever other data defined by the matching method in the <code>AbstractCriterionTriggerInstance</code> subclass. This method should internally call <code>SimpleCriterionTrigger#trigger</code> to properly handle checking all listeners. Most trigger instances call this method <code>#trigger</code>.</p>
+<pre class="highlight"><code class="language-java">// This method is unique for each trigger and is as such not overridden
+public void trigger(ServerPlayer player, ItemStack stack) {
+  this.trigger(player,
+    // The condition checker method within the AbstractCriterionTriggerInstance subclass
+    triggerInstance -&gt; triggerInstance.matches(stack)
+  );
+}</code></pre>
+<p>Afterwards, an instance should be registered using <code>CriteriaTriggers#register</code> during <code>FMLCommonSetupEvent</code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><code>CriteriaTriggers#register</code> must be enqueued to the synchronous work queue via <code>FMLCommonSetupEvent#enqueueWork</code> as the method is not thread-safe.</p>
+</div>
+<h3 id="calling-the-trigger">Calling the Trigger<a class="headerlink" href="#calling-the-trigger" title="Permanent link"> </a></h3>
+<p>Whenever the action being checked is performed, the <code>#trigger</code> method defined by the <code>SimpleCriterionTrigger</code> subclass should be called.</p>
+<pre class="highlight"><code class="language-java">// In some piece of code where the action is being performed
+// Where EXAMPLE_CRITERIA_TRIGGER is the custom criteria trigger
+public void performExampleAction(ServerPlayer player, ItemStack stack) {
+  // Run code to perform action
+  EXAMPLE_CRITERIA_TRIGGER.trigger(player, stack);
+}</code></pre>
+<h2 id="advancement-rewards">Advancement Rewards<a class="headerlink" href="#advancement-rewards" title="Permanent link"> </a></h2>
+<p>When an advancement is completed, rewards may be given out. These can be a combination of experience points, loot tables, recipes for the recipe book, or a <a href="https://minecraft.fandom.com/wiki/Function_(Java_Edition)">function</a> executed as a creative player.</p>
+<pre class="highlight"><code class="language-js">// In some advancement JSON
+"rewards": {
+  "experience": 10,
+  "loot": [
+    "minecraft:example_loot_table",
+    "minecraft:example_loot_table2"
+    // ...
+  ],
+  "recipes": [
+    "minecraft:example_recipe",
+    "minecraft:example_recipe2"
+    // ...
+  ],
+  "function": "minecraft:example_function"
+}</code></pre>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glm - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="global-loot-modifiers">Global Loot Modifiers<a class="headerlink" href="#global-loot-modifiers" title="Permanent link"> </a></h1>
+<p>Global Loot Modifiers are a data-driven method of handling modification of harvested drops without the need to overwrite dozens to hundreds of vanilla loot tables or to handle effects that would require interactions with another mod&rsquo;s loot tables without knowing what mods may be loaded. Global Loot Modifiers are also stacking, rather than last-load-wins, similar to tags.</p>
+<h2 id="registering-a-global-loot-modifier">Registering a Global Loot Modifier<a class="headerlink" href="#registering-a-global-loot-modifier" title="Permanent link"> </a></h2>
+<p>You will need 4 things:</p>
+<ol>
+<li>Create a <code>global_loot_modifiers.json</code>.<ul>
+<li>This will tell Forge about your modifiers and works similar to <a href="../tags/">tags</a>.</li>
+</ul>
+</li>
+<li>A serialized json representing your modifier.<ul>
+<li>This will contain all of the data about your modification and allows data packs to tweak your effect.</li>
+</ul>
+</li>
+<li>A class that extends <code>IGlobalLootModifier</code>.<ul>
+<li>The operational code that makes your modifier work. Most modders can extend <code>LootModifier</code> as it supplies base functionality.</li>
+</ul>
+</li>
+<li>Finally, a codec to encode and decode your operational class.<ul>
+<li>This is <a href="../../../concepts/registries/#methods-for-registering">registered</a> as any other <code>IForgeRegistryEntry</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="the-global_loot_modifiersjson">The <code>global_loot_modifiers.json</code><a class="headerlink" href="#the-global_loot_modifiersjson" title="Permanent link"> </a></h2>
+<p>The <code>global_loot_modifiers.json</code> represents all loot modifiers to be loaded into the game. This file <strong>MUST</strong> be placed within <code>data/forge/loot_modifiers/global_loot_modifiers.json</code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><code>global_loot_modifiers.json</code> will only be read in the <code>forge</code> namespace. The file will be neglected if it is under the mod&rsquo;s namespace.</p>
+</div>
+<p><code>entries</code> is an <em>ordered list</em> of the modifiers that will be loaded. The <a href="../../../concepts/resources/#ResourceLocation">ResourceLocation</a>s specified points to their associated entry within <code>data/&lt;namespace&gt;/loot_modifiers/&lt;path&gt;.json</code>. This is primarily relevant to data pack makers for resolving conflicts between modifiers from separate mods.</p>
+<p><code>replace</code>, when <code>true</code>, changes the behavior from appending loot modifiers to the global list to replacing the global list entries entirely. Modders will want to use <code>false</code> for compatibility with other mod implementations. Datapack makers may want to specify their overrides with <code>true</code>.</p>
+<pre class="highlight"><code class="language-js">{
+  "replace": false, // Must be present
+  "entries": [
+    // Represents a loot modifier in 'data/examplemod/loot_modifiers/example_glm.json'
+    "examplemod:example_glm",
+    "examplemod:example_glm2"
+    // ...
+  ]
+}</code></pre>
+<h2 id="the-serialized-json">The Serialized JSON<a class="headerlink" href="#the-serialized-json" title="Permanent link"> </a></h2>
+<p>This file contains all of the potential variables related to your modifier, including the conditions that must be met prior to modifying any loot. Avoid hard-coded values wherever possible so that data pack makers can adjust balance if they wish to.</p>
+<p><code>type</code> represents the registry name of the <a href="#the-loot-modifier-codec">codec</a> used to read the associated JSON file. This must always be present.</p>
+<p><code>conditions</code> should represent the loot table conditions for this modifier to activate. Conditions should avoid being hardcoded to allow datapack creators as much flexibility to adjust the criteria. This must also be always present.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Although <code>conditions</code> should represent what is needed for the modifier to activate, this is only the case if using the bundled Forge classes. If using <code>LootModifier</code> as a subclass, all conditions will be <strong>ANDed</strong> together and checked to see if the modifier should be applied.</p>
+</div>
+<p>Any additional properties read by the serializer and defined by the modifier can also be specified.</p>
+<pre class="highlight"><code class="language-js">// Within data/examplemod/loot_modifiers/example_glm.json
+{
+  "type": "examplemod:example_loot_modifier",
+  "conditions": [
+    // Normal loot table conditions
+    // ...
+  ],
+  "prop1": "val1",
+  "prop2": 10,
+  "prop3": "minecraft:dirt"
+}</code></pre>
+<h2 id="igloballootmodifier"><code>IGlobalLootModifier</code><a class="headerlink" href="#igloballootmodifier" title="Permanent link"> </a></h2>
+<p>To supply the functionality a global loot modifier specifies, a <code>IGlobalLootModifier</code> implementation must be specified. These are instances generated each time a serializer decodes the information from JSON and supplies it into this object.</p>
+<p>There are two methods that needs to be defined in order to create a new modifier: <code>#apply</code> and <code>#codec</code>. <code>#apply</code> takes in the current loot that will be generated along with the context information such as the currently level or additional defined parameters. It returns the list of drops to generate.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned list of drops from any one modifier is fed into other modifiers in the order they are registered. As such, modified loot can be modified by another loot modifier.</p>
+</div>
+<p><code>#codec</code> returns the registered <a href="#the-loot-modifier-codec">codec</a> used to encode and decode the modifier to/from JSON.</p>
+<h3 id="the-lootmodifier-subclass">The <code>LootModifier</code> Subclass<a class="headerlink" href="#the-lootmodifier-subclass" title="Permanent link"> </a></h3>
+<p><code>LootModifier</code> is an abstract implementation of <code>IGlobalLootModifier</code> to provide the base functionality which most modders can easily extend and implement. This expands upon the existing interface by defining the <code>#apply</code> method to check the conditions to determine whether or not to modify the generated loot.</p>
+<p>There are two things of note within the subclass implementation: the constructor which must take in an array of <code>LootItemCondition</code>s and the <code>#doApply</code> method.</p>
+<p>The array of <code>LootItemCondition</code>s define the list of conditions that must be true before the loot can be modified. The supplied conditions are <strong>ANDed</strong> together, meaning that all conditions must be true.</p>
+<p>The <code>#doApply</code> method works the same as the <code>#apply</code> method except that it only executes once all conditions return true.</p>
+<pre class="highlight"><code class="language-java">public class ExampleModifier extends LootModifier {
+
+  public ExampleModifier(LootItemCondition[] conditionsIn, String prop1, int prop2, Item prop3) {
+    super(conditionsIn);
+    // Store the rest of the parameters
+  }
+
+  @NotNull
+  @Override
+  protected ObjectArrayList&lt;ItemStack&gt; doApply(ObjectArrayList&lt;ItemStack&gt; generatedLoot, LootContext context) {
+    // Modify the loot and return the new drops
+  }
+
+  @Override
+  public Codec&lt;? extends IGlobalLootModifier&gt; codec() {
+    // Return the codec used to encode and decode this modifier
+  }
+}</code></pre>
+<h2 id="the-loot-modifier-codec">The Loot Modifier Codec<a class="headerlink" href="#the-loot-modifier-codec" title="Permanent link"> </a></h2>
+<p>The connector between the JSON and the <code>IGlobalLootModifier</code> instance is a <a href="../../../datastorage/codecs/"><code>Codec&lt;T&gt;</code></a>, where <code>T</code> represents the type of the <code>IGlobalLootModifier</code> to use.</p>
+<p>For ease of convenience, a loot conditions codec has been provided for an easy addition to a record-like codec via <code>LootModifier#codecStart</code>. This is utilized for <a href="../../../datagen/server/glm/">data generation</a> of the associated loot modifier.</p>
+<pre class="highlight"><code class="language-java">// For some DeferredRegister&lt;Codec&lt;? extends IGlobalLootModifier&gt;&gt; REGISTRAR
+public static final RegistryObject&lt;Codec&lt;ExampleModifier&gt;&gt; = REGISTRAR.register("example_codec", () -&gt;
+  RecordCodecBuilder.create(
+    inst -&gt; LootModifier.codecStart(inst).and(
+      inst.group(
+        Codec.STRING.fieldOf("prop1").forGetter(m -&gt; m.prop1),
+        Codec.INT.fieldOf("prop2").forGetter(m -&gt; m.prop2),
+        ForgeRegistries.ITEMS.getCodec().fieldOf("prop3").forGetter(m -&gt; m.prop3)
+      )
+    ).apply(inst, ExampleModifier::new)
+  )
+);</code></pre>
+<p><a href="https://github.com/MinecraftForge/MinecraftForge/blob/1.19.x/src/test/java/net/minecraftforge/debug/gameplay/loot/GlobalLootModifiersTest.java">Examples</a> can be found on the Forge Git repository, including silk touch and smelting effects.</p>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

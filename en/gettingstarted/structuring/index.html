@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Structuring Your Mod - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../js/theme.js"></script>
+
+    <script>var base_url = '../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../ko" class="logo-image"><img src="../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+<li >
+    
+    <a href="../../" class="elem-text">Home</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../contributing/" class="elem-text">Contributing to the Docs</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Getting Started</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+
+<li >
+    
+    <a href="../" class="elem-text">Introduction</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li class="elem-active elem-toc" >
+    
+    <a href="#structuring-your-mod" class="elem-text">Structuring Your Mod</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#packaging">Packaging</a></li>
+        
+        <li class="toc-subitem"><a href="#class-naming-schemes">Class Naming Schemes</a></li>
+        
+        <li class="toc-subitem"><a href="#choose-one-method-from-many">Choose One Method from Many</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="structuring-your-mod">Structuring Your Mod<a class="headerlink" href="#structuring-your-mod" title="Permanent link"> </a></h1>
+<p>Structured mods are beneficial for maintenance, making contributions, and providing a clearer understanding of the underlying codebase. Some of the recommendations from Java, Minecraft, and Forge are listed below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do not have to follow the advice below; you can structure your mod any way you see fit. However, it is still highly recommended to do so.</p>
+</div>
+<h2 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link"> </a></h2>
+<p>When structuring your mod, pick a unique, top-level package structure. Many programmers will use the same name for different classes, interfaces, etc. Java allows classes to have the same name as long as they are in different packages. As such, if two classes have the same package with the same name, only one would be loaded, most likely causing the game to crash.</p>
+<pre class="highlight"><code>a.jar
+  - com.example.ExampleClass
+b.jar
+  - com.example.ExampleClass // This class will not normally be loaded</code></pre>
+<p>This is even more relevant when it comes to loading modules. If there are class files in two packages under the same name in separate modules, this will cause the mod loader <strong>to crash on startup</strong> since mod modules are exported to the game and other mods.</p>
+<pre class="highlight"><code>module A
+  - package X
+    - class I
+    - class J
+module B
+  - package X // This package will cause the mod loader to crash, as there already is a module with package X being exported
+    - class R
+    - class S
+    - class T</code></pre>
+<p>As such, your top level package should be something that you own: a domain, email address, a subdomain of where your website, etc. It can even be your name or username as long as you can guarantee that it will be uniquely identifiable within the expected target.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Value</th>
+<th align="left">Top-Level Package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Domain</td>
+<td align="center">example.com</td>
+<td align="left"><code>com.example</code></td>
+</tr>
+<tr>
+<td align="center">Subdomain</td>
+<td align="center">example.github.io</td>
+<td align="left"><code>io.github.example</code></td>
+</tr>
+<tr>
+<td align="center">Email</td>
+<td align="center">example@gmail.com</td>
+<td align="left"><code>com.gmail.example</code></td>
+</tr>
+</tbody>
+</table>
+<p>The next level package should then be your mod&rsquo;s id (e.g. <code>com.example.examplemod</code> where <code>examplemod</code> is the mod id). This will guarantee that, unless you have two mods with the same id (which should never be the case), your packages should not have any issues loading.</p>
+<p>You can find some additional naming conventions on <a href="https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">Oracle&rsquo;s tutorial page</a>.</p>
+<h3 id="sub-package-organization">Sub-package Organization<a class="headerlink" href="#sub-package-organization" title="Permanent link"> </a></h3>
+<p>In addition to the top-level package, it is highly recommend to break your mod&rsquo;s classes between subpackages. There are two major methods on how to do so:</p>
+<ul>
+<li><strong>Group By Function</strong>: Make subpackages for classes with a common purpose. For example, blocks can be under <code>block</code> or <code>blocks</code>, entities under <code>entity</code> or <code>entities</code>, etc. Mojang uses this structure with the singular version of the word.</li>
+<li><strong>Group By Logic</strong>: Make subpackages for classes with a common logic. For example, if you were creating a new type of crafting table, you would put its block, menu, item, and more under <code>feature.crafting_table</code>.</li>
+</ul>
+<h4 id="client-server-and-data-packages">Client, Server, and Data Packages<a class="headerlink" href="#client-server-and-data-packages" title="Permanent link"> </a></h4>
+<p>In general, code only for a given side or runtime should be isolated from the other classes in a separate subpackage. For example, code related to <a href="../../datagen/">data generation</a> should go in a <code>data</code> package while code only on the dedicated server should go in a <code>server</code> package.</p>
+<p>However, it is highly recommended that <a href="../../concepts/sides/">client-only code</a> should be isolated in a <code>client</code> subpackage. This is because dedicated servers have no access to any of the client-only packages in Minecraft. As such, having a dedicated package would provide a decent sanity check to verify you are not reaching across sides within your mod.</p>
+<h2 id="class-naming-schemes">Class Naming Schemes<a class="headerlink" href="#class-naming-schemes" title="Permanent link"> </a></h2>
+<p>A common class naming scheme makes it easier to decipher the purpose of the class or to easily locate specific classes.</p>
+<p>Classes are commonly suffixed with its type, for example:</p>
+<ul>
+<li>An <code>Item</code> called <code>PowerRing</code> -&gt; <code>PowerRingItem</code>.</li>
+<li>A <code>Block</code> called <code>NotDirt</code> -&gt; <code>NotDirtBlock</code>.</li>
+<li>A menu for an <code>Oven</code> -&gt; <code>OvenMenu</code>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mojang typically follows a similar structure for all classes except entities. Those are represented by just their names (e.g. <code>Pig</code>, <code>Zombie</code>, etc.).</p>
+</div>
+<h2 id="choose-one-method-from-many">Choose One Method from Many<a class="headerlink" href="#choose-one-method-from-many" title="Permanent link"> </a></h2>
+<p>There are many methods for performing a certain task: registering an object, listening for events, etc. It&rsquo;s generally recommended to be consistent by using a single method to accomplish a given task. While this does improve code formatting, it also avoid any weird interactions or redundancies that may occur (e.g. your event listener executing twice).</p>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

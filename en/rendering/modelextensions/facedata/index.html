@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facedata - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="face-data">Face Data<a class="headerlink" href="#face-data" title="Permanent link"> </a></h1>
+<p>In a vanilla &ldquo;elements&rdquo; model, additional data about an element&rsquo;s faces can be specified at either the element level or the face level. Faces which do not specify their own face data will fall back to the element&rsquo;s face data or a default if no face data is specified at the element level.</p>
+<p>To use this extension for a generated item model, the model must be loaded through the <code>forge:item_layers</code> model loader due to the vanilla item model generator not being extended to read this additional data.</p>
+<p>All values of the face data are optional.</p>
+<h2 id="elements-model">Elements Model<a class="headerlink" href="#elements-model" title="Permanent link"> </a></h2>
+<p>In vanilla &ldquo;elements&rdquo; models, the face data applies to the face it is specified in or all faces of the element it is specified in which don&rsquo;t have their own face data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code>forge_data</code> is specified on a face, it will not inherit any parameters from the element-level <code>forge_data</code> declaration.</p>
+</div>
+<p>The additional data can be specified in the two ways shown in this example:
+<pre class="highlight"><code class="language-js">{
+  "elements": [
+    {
+      "forge_data": {
+        "color": "0xFFFF0000",
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      },
+      "faces": {
+        "north": {
+          "forge_data": {
+            "color": "0xFFFF0000",
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          },
+          // ...
+        },
+        // ...
+      },
+      // ...
+    }
+  ]
+}</code></pre></p>
+<h2 id="generated-item-model">Generated Item Model<a class="headerlink" href="#generated-item-model" title="Permanent link"> </a></h2>
+<p>In item models generated using the <code>forge:item_layers</code> loader, face data is specified for each texture layer and applies to all of the geometry (front/back facing quads and edge quads).</p>
+<p>The <code>forge_data</code> field must be located at the top level of the model JSON, with each key-value pair associating a face data object to a layer index.</p>
+<p>In the following example, layer 1 will be tinted red and glow at full brightness:
+<pre class="highlight"><code class="language-js">{
+  "textures": {
+    "layer0": "minecraft:item/stick",
+    "layer1": "minecraft:item/glowstone_dust"
+  },
+  "forge_data": {
+    "1": {
+      "color": "0xFFFF0000",
+      "block_light": 15,
+      "sky_light": 15,
+      "ambient_occlusion": false
+    }
+  }
+}</code></pre></p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link"> </a></h2>
+<h3 id="color">Color<a class="headerlink" href="#color" title="Permanent link"> </a></h3>
+<p>Specifying a color value with the <code>color</code> entry will apply that color as a tint to the quads. Defaults to <code>0xFFFFFFFF</code> (white, fully opaque). The color must be in the <code>ARGB</code> format packed into a 32-bit integer and can be specified as either a hexadecimal string (<code>"0xAARRGGBB"</code>) or as a decimal integer literal (JSON does not support hexadecimal integer literals).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The four color components are multiplied with the texture&rsquo;s pixels. Omitting the alpha component is equivalent to making it 0, which will make the geometry fully transparent.</p>
+</div>
+<p>This can be used as a replacement for tinting with <a href="../../../resources/client/models/tinting/"><code>BlockColor</code> and <code>ItemColor</code></a> if the color values are constant.</p>
+<h3 id="block-and-sky-light">Block and Sky Light<a class="headerlink" href="#block-and-sky-light" title="Permanent link"> </a></h3>
+<p>Specifying a block and/or sky light value with the <code>block_light</code> and <code>sky_light</code> entry respectively will override the respective light value of the quads. Both values default to 0. The values must be in the range 0-15 (inclusive) and are treated as a minimum value for the respective light type when the face is rendered, meaning that a higher in-world value of the respective light type will override the specified value.</p>
+<p>The specified light values are purely client-side and affect neither the server&rsquo;s light level nor the brightness of surrounding blocks.</p>
+<h3 id="ambient-occlusion">Ambient Occlusion<a class="headerlink" href="#ambient-occlusion" title="Permanent link"> </a></h3>
+<p>Specifying the <code>ambient_occlusion</code> flag will configure <a href="https://en.wikipedia.org/wiki/Ambient_occlusion">AO</a> for the quads. Defaults to <code>true</code>. The behaviour of this flag is equivalent to the top-level <code>ambientocclusion</code> flag of the vanilla format.</p>
+<p><img alt="Ambient occlusion in action" src="../ambientocclusion_annotated.png" /><br />
+<em>Ambient occlusion enabled on the left and disabled on the right, demonstrated with the Smooth Lighting graphics setting</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the top-level AO flag is set to false, specifying this flag as true on an element or face won&rsquo;t be able to override the top-level flag.
+<pre class="highlight"><code class="language-js">{
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "forge_data": {
+        "ambient_occlusion": true // Has no effect
+      }
+    }
+  ]
+}</code></pre></p>
+</div>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

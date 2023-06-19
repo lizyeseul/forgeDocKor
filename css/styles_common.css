@@ -1,0 +1,158 @@
+/* ////
+/// Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+///
+/// Permission is hereby granted, free of charge, to any person obtaining a
+/// copy of this software and associated documentation files (the "Software"),
+/// to deal in the Software without restriction, including without limitation
+/// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+/// and/or sell copies of the Software, and to permit persons to whom the
+/// Software is furnished to do so, subject to the following conditions:
+///
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+/// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+/// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+/// DEALINGS
+////
+*/
+:root{
+    --md-default-fg-color: #babababa;
+    --md-default-fg-color--lightest:     hsla(0, 0%, 0%, 0.07);
+    --md-lang-bg-color:    #5a6674;
+
+    /* // Shadow depth 2 */
+    --md-shadow-z2:
+      0 #{4px} #{10px} hsla(0, 0%, 0%, 0.1),
+      0 0              #{1px}  hsla(0, 0%, 0%, 0.25);
+
+    --md-accent-fg-color:                hsla(#{hex2hsl($clr-indigo-a200)}, 1);
+}
+
+.md-header__option {
+    display: flex;
+    flex-shrink: 0;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.md-select {
+  position: relative;
+  z-index: 1;
+  margin: 0 20px;
+}
+
+
+.md-header__button {
+    border: none;
+    background: #00000000;
+    position: relative;
+    z-index: 1;
+    padding: 8px;
+    margin: 4px;
+    color: currentcolor;
+    vertical-align: middle;
+    cursor: pointer;
+    outline-color: var(--md-accent-fg-color);
+    transition: opacity 250ms;
+}
+.md-header__button:hover {
+    opacity: 0.7;
+}
+.md-header__button:not([hidden]) {
+    display: inline-block;
+}
+/* .md-header__button:not(.focus-visible) {
+    -webkit-tap-highlight-color: transparent;
+    outline: none
+} */
+
+
+.md-select__inner {
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 50%;
+    max-height: 0;
+    margin-top: 4px;
+    color: var(--md-default-fg-color);
+    background-color: var(--md-lang-bg-color);
+    border-radius: 2px;
+    box-shadow: var(--md-shadow-z2);
+    opacity: 0;
+    /* transition:
+      transform  250ms 375ms,
+      opacity    250ms 250ms,
+      max-height   0ms 500ms; */
+    /* transform: translate3d(-50%, px2rem(6px), 0); */
+}
+
+/* Selection bubble on parent focus/hover */
+.md-select:is(:focus-within, :hover) {
+    max-height: 200px;
+    opacity: 1;
+    transition:
+      transform  250ms cubic-bezier(0.1, 0.7, 0.1, 1),
+      opacity    250ms,
+      max-height   0ms;
+    /* transform: translate3d(-50%, 0, 0); */
+}
+
+.md-select__list{
+    max-height: inherit;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    font-size: 16px;
+    list-style-type: none;
+    border-radius: 2px;
+}
+
+.md-select__inner:after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-top: -4px;
+    margin-left: -4px;
+    content: "";
+    border: 4px solid transparent;
+    border-top: 0;
+    border-bottom-color: var(--md-lang-bg-color);
+}
+
+.md-select:focus-within .md-select__inner,
+.md-select:hover .md-select__inner {
+    max-height: 10rem;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+    transition: transform .25s cubic-bezier(.1, .7, .1, 1), opacity .25s, max-height 0ms
+}
+
+.md-select__item{
+    line-height: 36px;
+}
+
+.md-select__link {
+    display: block;
+    width: 100%;
+    padding-inline: 15px;
+    cursor: pointer;
+    outline: none;
+    transition:
+      background-color 250ms,
+      color            250ms;
+    scroll-snap-align: start;
+}
+
+.md-select__link:is(:focus, :hover) {
+    color: var(--md-accent-fg-color);
+}
+
+.md-select__link:focus {
+    background-color: var(--md-default-fg-color--lightest);
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipes - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="recipe-generation">Recipe Generation<a class="headerlink" href="#recipe-generation" title="Permanent link"> </a></h1>
+<p>Recipes can be generated for a mod by subclassing <code>RecipeProvider</code> and implementing <code>#buildRecipes</code>. A recipe is supplied for data generation once a <code>FinishedRecipe</code> view is accepted by the consumer. <code>FinishedRecipe</code>s can either be created and supplied manually or, for convenience, created using a <code>RecipeBuilder</code>.</p>
+<p>After implementation, the provider must be <a href="../../#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<pre class="highlight"><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when server data are generating
+        event.includeServer(),
+        MyRecipeProvider::new
+    );
+}</code></pre>
+<h2 id="recipebuilder"><code>RecipeBuilder</code><a class="headerlink" href="#recipebuilder" title="Permanent link"> </a></h2>
+<p><code>RecipeBuilder</code> is a convenience implementation for creating <code>FinishedRecipe</code>s to generate. It provides basic definitions for unlocking, grouping, saving, and getting the result of a recipe. This is done through <code>#unlockedBy</code>, <code>#group</code>, <code>#save</code>, and <code>#getResult</code> respectively.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><a href="../../../resources/server/recipes/#recipe-itemstack-result"><code>ItemStack</code> outputs</a> in recipes are not supported within vanilla recipe builders. A <code>FinishedRecipe</code> must be built in a different manner for existing vanilla recipe serializers to generate this data.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The item results being generated must have a valid <code>RecipeCategory</code> specified; otherwise, a <code>NullPointerException</code> will be thrown.</p>
+</div>
+<p>All recipe builders except for [<code>SpecialRecipeBuilder</code>] require an advancement criteria to be specified. All recipes generate a criteria unlocking the recipe if the player has used the recipe previously. However, an additional criteria must be specified that allows the player to obtain the recipe without any prior knowledge. If any of the criteria specified is true, then the played will obtain the recipe for the recipe book.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Recipe criteria commonly use <code>InventoryChangeTrigger</code> to unlock their recipe when certain items are present in the user&rsquo;s inventory.</p>
+</div>
+<h3 id="shapedrecipebuilder">ShapedRecipeBuilder<a class="headerlink" href="#shapedrecipebuilder" title="Permanent link"> </a></h3>
+<p><code>ShapedRecipeBuilder</code> is used to generate shaped recipes. The builder can be initialized via <code>#shaped</code>. The recipe group, input symbol pattern, symbol definition of ingredients, and the recipe unlock criteria can be specified before saving.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+  .pattern("a a") // Create recipe pattern
+  .define('a', item) // Define what the symbol represents
+  .unlockedBy("criteria", criteria) // How the recipe is unlocked
+  .save(writer); // Add data to builder</code></pre>
+<h4 id="additional-validation-checks">Additional Validation Checks<a class="headerlink" href="#additional-validation-checks" title="Permanent link"> </a></h4>
+<p>Shaped recipes have some additional validation checks performed before building:</p>
+<ul>
+<li>A pattern must be defined and take in more than one item.</li>
+<li>All pattern rows must be the same width.</li>
+<li>A symbol cannot be defined more than once.</li>
+<li>The space character (<code>' '</code>) is reserved for representing no item in a slot and, as such, cannot be defined.</li>
+<li>A pattern must use all symbols defined by the user.</li>
+</ul>
+<h3 id="shapelessrecipebuilder">ShapelessRecipeBuilder<a class="headerlink" href="#shapelessrecipebuilder" title="Permanent link"> </a></h3>
+<p><code>ShapelessRecipeBuilder</code> is used to generate shapeless recipes. The builder can be initialized via <code>#shapeless</code>. The recipe group, input ingredients, and the recipe unlock criteria can be specified before saving.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+ShapelessRecipeBuilder builder = ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, result)
+  .requires(item) // Add item to the recipe
+  .unlockedBy("criteria", criteria) // How the recipe is unlocked
+  .save(writer); // Add data to builder</code></pre>
+<h3 id="simplecookingrecipebuilder">SimpleCookingRecipeBuilder<a class="headerlink" href="#simplecookingrecipebuilder" title="Permanent link"> </a></h3>
+<p><code>SimpleCookingRecipeBuilder</code> is used to generate smelting, blasting, smoking, and campfire cooking recipes. Additionally, custom cooking recipes using the <code>SimpleCookingSerializer</code> can also be data generated using this builder. The builder can be initialized via <code>#smelting</code>, <code>#blasting</code>, <code>#smoking</code>, <code>#campfireCooking</code>, or <code>#cooking</code> respectively. The recipe group and the recipe unlock criteria can be specified before saving.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SimpleCookingRecipeBuilder builder = SimpleCookingRecipeBuilder.smelting(input, RecipeCategory.MISC, result, experience, cookingTime)
+  .unlockedBy("criteria", criteria) // How the recipe is unlocked 
+  .save(writer); // Add data to builder</code></pre>
+<h3 id="singleitemrecipebuilder">SingleItemRecipeBuilder<a class="headerlink" href="#singleitemrecipebuilder" title="Permanent link"> </a></h3>
+<p><code>SingleItemRecipeBuilder</code> is used to generate stonecutting recipes. Additionally, custom single item recipes using a serializer like <code>SingleItemRecipe$Serializer</code> can also be data generated using this builder. The builder can be initialized via <code>#stonecutting</code> or through the constructor respectively. The recipe group and the recipe unlock criteria can be specified before saving.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SingleItemRecipeBuilder builder = SingleItemRecipeBuilder.stonecutting(input, RecipeCategory.MISC, result)
+  .unlockedBy("criteria", criteria) // How the recipe is unlocked
+  .save(writer); // Add data to builder</code></pre>
+<h2 id="non-recipebuilder-builders">Non-<code>RecipeBuilder</code> Builders<a class="headerlink" href="#non-recipebuilder-builders" title="Permanent link"> </a></h2>
+<p>Some recipe builders do not implement <code>RecipeBuilder</code> due to lacking features used by all previously mentioned recipes.</p>
+<h3 id="smithingtransformrecipebuilder">SmithingTransformRecipeBuilder<a class="headerlink" href="#smithingtransformrecipebuilder" title="Permanent link"> </a></h3>
+<p><code>SmithingTransformRecipeBuilder</code> is used to generate smithing recipes which transform an item. Additionally, custom recipes using a serializer like <code>SmithingTransformRecipe$Serializer</code> can also be data generated using this builder. The builder can be initialized via <code>#smithing</code> or through the constructor respectively. The recipe unlock criteria can be specified before saving.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SmithingTransformRecipeBuilder builder = SmithingTransformRecipeBuilder.smithing(template, base, addition, RecipeCategory.MISC, result)
+  .unlocks("criteria", criteria) // How the recipe is unlocked
+  .save(writer, name); // Add data to builder</code></pre>
+<h3 id="smithingtrimrecipebuilder">SmithingTrimRecipeBuilder<a class="headerlink" href="#smithingtrimrecipebuilder" title="Permanent link"> </a></h3>
+<p><code>SmithingTrimRecipeBuilder</code> is used to generate smithing recipes for armor trims. Additionally, custom upgrade recipes using a serializer like <code>SmithingTrimRecipe$Serializer</code> can also be data generated using this builder. The builder can be initialized via <code>#smithingTrim</code> or through the constructor respectively. The recipe unlock criteria can be specified before saving.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SmithingTrimRecipe builder = SmithingTrimRecipe.smithingTrim(template, base, addition, RecipeCategory.MISC)
+  .unlocks("criteria", criteria) // How the recipe is unlocked
+  .save(writer, name); // Add data to builder</code></pre>
+<h3 id="specialrecipebuilder">SpecialRecipeBuilder<a class="headerlink" href="#specialrecipebuilder" title="Permanent link"> </a></h3>
+<p><code>SpecialRecipeBuilder</code> is used to generate empty JSONs for dynamic recipes that cannot easily be constrained to the recipe JSON format (dying armor, firework, etc.). The builder can be initialized via <code>#special</code>.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SpecialRecipeBuilder.special(dynamicRecipeSerializer)
+  .save(writer, name); // Add data to builder</code></pre>
+<h2 id="conditional-recipes">Conditional Recipes<a class="headerlink" href="#conditional-recipes" title="Permanent link"> </a></h2>
+<p><a href="../../../resources/server/conditional/">Conditional recipes</a> can also be data generated via <code>ConditionalRecipe$Builder</code>. The builder can be obtained using <code>#builder</code>.</p>
+<p>Conditions for each recipe can be specified by first calling <code>#addCondition</code> and then calling <code>#addRecipe</code> after all conditions have been specified. This process can be repeated as many times as the programmer would like.</p>
+<p>After all recipes have been specified, advancements can be added for each recipe at the end using <code>#generateAdvancement</code>. Alternatively, the conditional advancement can be set using <code>#setAdvancement</code>.</p>
+<pre class="highlight"><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+ConditionalRecipe.builder()
+  // Add the conditions for the recipe
+  .addCondition(...)
+  // Add recipe to return when conditions are true
+  .addRecipe(...)
+
+  // Add the next conditions for the next recipe
+  .addCondition(...)
+  // Add next recipe to return when the next conditions are true
+  .addRecipe(...)
+
+  // Create conditional advancement which uses the conditions
+  // and unlocking advancement in the recipes above
+  .generateAdvancement()
+  .build(writer, name);</code></pre>
+<h3 id="iconditionbuilder">IConditionBuilder<a class="headerlink" href="#iconditionbuilder" title="Permanent link"> </a></h3>
+<p>To simplify adding conditions to conditional recipes without having to construct the instances of each condition instance manually, the extended <code>RecipeProvider</code> can implement <code>IConditionBuilder</code>. The interface adds methods to easily construct condition instances.</p>
+<pre class="highlight"><code class="language-java">// In ConditionalRecipe$Builder#addCondition
+(
+  // If either 'examplemod:example_item'
+  // OR 'examplemod:example_item2' exists
+  // AND
+  // NOT FALSE
+
+  // Methods are defined by IConditionBuilder
+  and( 
+    or(
+      itemExists("examplemod", "example_item"),
+      itemExists("examplemod", "example_item2")
+    ),
+    not(
+      FALSE()
+    )
+  )
+)</code></pre>
+<h2 id="custom-recipe-serializers">Custom Recipe Serializers<a class="headerlink" href="#custom-recipe-serializers" title="Permanent link"> </a></h2>
+<p>Custom recipe serializers can be data generated by creating a builder that can construct a <code>FinishedRecipe</code>. The finished recipe encodes the recipe data and its unlocking advancement, when present, to JSON. Additionally, the name and serializer of the recipe is also specified to know where to write to and what can decode the object when loading. Once a <code>FinishedRecipe</code> is constructed, it simply needs to be passed to the <code>Consumer</code> supplied by <code>RecipeProvider#buildRecipes</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>FinishedRecipe</code>s are flexible enough that any object transformation can be data generated, not just items.</p>
+</div>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

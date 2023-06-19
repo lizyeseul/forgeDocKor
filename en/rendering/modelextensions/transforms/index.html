@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transforms - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="root-transforms">Root Transforms<a class="headerlink" href="#root-transforms" title="Permanent link"> </a></h1>
+<p>Adding the <code>transform</code> entry at the top level of a model JSON suggests to the loader that a transformation should be applied to all geometry right before the rotations in the <a href="https://minecraft.fandom.com/wiki/Tutorials/Models#Block_states">blockstate</a> file in the case of a block model, and before the <a href="../../modelloaders/transform/">display transforms</a> in the case of an item model. The transformation is available through <code>IGeometryBakingContext#getRootTransform()</code> in <code>IUnbakedGeometry#bake()</code>.</p>
+<p>Custom model loaders may ignore this field entirely.</p>
+<p>The root transforms can be specified in two formats:</p>
+<ol>
+<li>A JSON object containing a singular <code>matrix</code> entry containing a raw transformation matrix in the form of a nested JSON array with the last row omitted (3*4 matrix, row major order). The matrix is the composition of the translation, left rotation, scale, right rotation and the transformation origin in that order. Example demonstrating the structure:
+    <pre class="highlight"><code class="language-js">"transform": {
+    "matrix": [
+        [ 0, 0, 0, 0 ],
+        [ 0, 0, 0, 0 ],
+        [ 0, 0, 0, 0 ]
+    ]
+}</code></pre></li>
+<li>A JSON object containing any combination of the following optional entries:<ul>
+<li><code>origin</code>: origin point used for the rotations and scaling</li>
+<li><code>translation</code>: relative translation</li>
+<li><code>rotation</code> or <code>left_rotation</code>: rotation around the translated origin to be applied before scaling</li>
+<li><code>scale</code>: scale relative to the translated origin</li>
+<li><code>right_rotation</code> or <code>post_rotation</code>: rotation around the translated origin to be applied after scaling</li>
+</ul>
+</li>
+</ol>
+<h2 id="element-wise-specification">Element-wise specification<a class="headerlink" href="#element-wise-specification" title="Permanent link"> </a></h2>
+<p>If the transformation is specified as a combination of the entries mentioned in option 4, these entries will be applied in the order of <code>translation</code>, <code>left_rotation</code>, <code>scale</code>, <code>right_rotation</code>.<br />
+The transformation is moved to the specified origin as a last step.</p>
+<pre class="highlight"><code class="language-js">{
+    "transform": {
+        "origin": "center",
+        "translation": [ 0, 0.5, 0 ],
+        "rotation": { "y": 45 }
+    },
+    // ...
+}</code></pre>
+<p>The elements are expected to be defined as follows:</p>
+<h3 id="origin">Origin<a class="headerlink" href="#origin" title="Permanent link"> </a></h3>
+<p>The origin can be specified either as an array of 3 floating point values representing a three-dimensional vector: <code>[ x, y, z ]</code> or as one of the three default values:</p>
+<ul>
+<li><code>"corner"</code> (0, 0, 0)</li>
+<li><code>"center"</code> (.5, .5, .5)</li>
+<li><code>"opposing-corner"</code> (1, 1, 1)</li>
+</ul>
+<p>If the origin is not specified, it defaults to <code>"opposing-corner"</code>.</p>
+<h3 id="translation">Translation<a class="headerlink" href="#translation" title="Permanent link"> </a></h3>
+<p>The translation must be specified as an array of 3 floating point values representing a three-dimensional vector: <code>[ x, y, z ]</code> and defaults to (0, 0, 0) if not present.</p>
+<h3 id="left-and-right-rotation">Left and Right Rotation<a class="headerlink" href="#left-and-right-rotation" title="Permanent link"> </a></h3>
+<p>The rotations can be specified in any one of the following four ways:</p>
+<ul>
+<li>Single JSON object with a single axis =&gt; rotation degree mapping: <code>{ "x": 90 }</code></li>
+<li>Array of an arbitrary amount of JSON objects with the above format (applied in the order they are specified in): <code>[ { "x": 90 }, { "y": 45 }, { "x": -22.5 } ]</code></li>
+<li>Array of 3 floating point values specifying the rotation in degrees around each axis: <code>[ 90, 180, 45 ]</code></li>
+<li>Array of 4 floating point values specifying a quaternion directly: <code>[ 0.38268346, 0, 0, 0.9238795 ]</code> (example equals 45 degrees around the X axis)</li>
+</ul>
+<p>If the respective rotation is not specified, it will default to no rotation.</p>
+<h3 id="scale">Scale<a class="headerlink" href="#scale" title="Permanent link"> </a></h3>
+<p>The scale must be specified as an array of 3 floating point values representing a three-dimensional vector: <code>[ x, y, z ]</code> and defaults to (1, 1, 1) if not present.</p>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

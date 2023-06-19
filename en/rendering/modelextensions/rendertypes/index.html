@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rendertypes - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="render-types">Render Types<a class="headerlink" href="#render-types" title="Permanent link"> </a></h1>
+<p>Adding the <code>render_type</code> entry at the top level of the JSON suggests to the loader what render type the model should use. If not specified, the loader gets to pick the render type(s) used, often falling back to the render types returned by <code>ItemBlockRenderTypes#getRenderLayers()</code>.</p>
+<p>Custom model loaders may ignore this field entirely.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since 1.19 this is preferred over the deprecated method of setting the applicable render type(s) via <code>ItemBlockRenderTypes#setRenderLayer()</code> for blocks.</p>
+</div>
+<p>Example of a model for a cutout block with the glass texture</p>
+<pre class="highlight"><code class="language-js">{
+  "render_type": "minecraft:cutout",
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "block/glass"
+  }
+}</code></pre>
+<h2 id="vanilla-values">Vanilla Values<a class="headerlink" href="#vanilla-values" title="Permanent link"> </a></h2>
+<p>The following options with the respective chunk and entity render type are supplied by Forge (<code>NamedRenderTypeManager#preRegisterVanillaRenderTypes()</code>):</p>
+<ul>
+<li><code>minecraft:solid</code><ul>
+<li>Chunk render type: <code>RenderType#solid()</code></li>
+<li>Entity render type: <code>ForgeRenderTypes#ITEM_LAYERED_SOLID</code></li>
+<li>Used for fully solid blocks (i.e. Stone)</li>
+</ul>
+</li>
+<li><code>minecraft:cutout</code><ul>
+<li>Chunk render type: <code>RenderType#cutout()</code></li>
+<li>Entity render type: <code>ForgeRenderTypes#ITEM_LAYERED_CUTOUT</code></li>
+<li>Used for blocks where any given pixel is either fully transparent or fully opaque (i.e. Glass Block)</li>
+</ul>
+</li>
+<li><code>minecraft:cutout_mipped</code><ul>
+<li>Chunk render type: <code>RenderType#cutoutMipped()</code></li>
+<li>Entity render type: <code>ForgeRenderTypes#ITEM_LAYERED_CUTOUT</code></li>
+<li>Chunk and entity render type differ due to mipmapping on the entity render type making items look weird</li>
+<li>Used for blocks where any given pixel is either fully transparent or fully opaque and the texture should be scaled down at larger distances (<a href="https://en.wikipedia.org/wiki/Mipmap">mipmapping</a>) to avoid visual artifacts (i.e. Leaves)</li>
+</ul>
+</li>
+<li><code>minecraft:cutout_mipped_all</code><ul>
+<li>Chunk render type: <code>RenderType#cutoutMipped()</code></li>
+<li>Entity render type: <code>ForgeRenderTypes#ITEM_LAYERED_CUTOUT_MIPPED</code></li>
+<li>Used in similar cases as <code>minecraft:cutout_mipped</code> when the item representation should also have mipmapping applied</li>
+</ul>
+</li>
+<li><code>minecraft:translucent</code><ul>
+<li>Chunk render type: <code>RenderType#translucent()</code></li>
+<li>Entity render type: <code>ForgeRenderTypes#ITEM_LAYERED_TRANSLUCENT</code></li>
+<li>Used for blocks where any given pixel may be partially transparent (i.e. Stained Glass)</li>
+</ul>
+</li>
+<li><code>minecraft:tripwire</code><ul>
+<li>Chunk render type: <code>RenderType#tripwire()</code></li>
+<li>Entity render type: <code>ForgeRenderTypes#ITEM_LAYERED_TRANSLUCENT</code></li>
+<li>Chunk and entity render type differ due to the tripwire render type not being feasible as an entity render type</li>
+<li>Used for blocks with the special requirement of being rendered to the weather render target (i.e. Tripwire)</li>
+</ul>
+</li>
+</ul>
+<h2 id="custom-values">Custom Values<a class="headerlink" href="#custom-values" title="Permanent link"> </a></h2>
+<p>Custom named render types to be specified in a model can be registered in the <code>RegisterNamedRenderTypesEvent</code>. This event is fired on the mod event bus.</p>
+<p>A custom named render type consists of two or three components:</p>
+<ul>
+<li>A chunk render type - any of the types in the list returned by <code>RenderType.chunkBufferLayers()</code> can be used</li>
+<li>A render type with the <code>DefaultVertexFormat.NEW_ENTITY</code> vertex format (&ldquo;entity render type&rdquo;)</li>
+<li>A render type with the <code>DefaultVertexFormat.NEW_ENTITY</code> vertex format for use when the <em>Fabulous!</em> graphics mode is selected (optional)</li>
+</ul>
+<p>The chunk render type is used when a block using this named render type is rendered as part of the chunk geometry.<br />
+The required entity render type is used when an item using this named render type is rendered in the Fast and Fancy graphics modes (inventory, ground, item frame, etc.).<br />
+The optional entity render type is used the same way as the required entity render type when the <em>Fabulous!</em> graphics mode is selected. This render type is needed in cases where the required entity render type does not work in the <em>Fabulous!</em> graphics mode (typically only applies to translucent render types).</p>
+<pre class="highlight"><code class="language-java">public static void onRegisterNamedRenderTypes(RegisterNamedRenderTypesEvent event)
+{
+  event.register("special_cutout", RenderType.cutout(), Sheets.cutoutBlockSheet());
+  event.register("special_translucent", RenderType.translucent(), Sheets.translucentCullBlockSheet(), Sheets.translucentItemSheet());
+}</code></pre>
+<p>These can then be addressed in JSON as <code>&lt;your_mod_id&gt;:special_cutout</code> and <code>&lt;your_mod_id&gt;:special_translucent</code>.</p>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tags - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="tag-generation">Tag Generation<a class="headerlink" href="#tag-generation" title="Permanent link"> </a></h1>
+<p><a href="../../../resources/server/tags/">Tags</a> can be generated for a mod by subclassing <code>TagsProvider</code> and implementing <code>#addTags</code>. After implementation, the provider must be <a href="../../#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<pre class="highlight"><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when server data are generating
+        event.includeServer(),
+        // Extends net.minecraftforge.common.data.BlockTagsProvider
+        output -&gt; new MyBlockTagsProvider(
+          output,
+          event.getLookupProvider(),
+          MOD_ID,
+          event.getExistingFileHelper()
+        )
+    );
+}</code></pre>
+<h2 id="tagsprovider"><code>TagsProvider</code><a class="headerlink" href="#tagsprovider" title="Permanent link"> </a></h2>
+<p>The tags provider has two methods used for generating tags: creating a tag with objects and other tags via <code>#tag</code>, or using tags from other object types to generate the tag data via <code>#getOrCreateRawBuilder</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typically, a provider will not call <code>#getOrCreateRawBuilder</code> directly unless a registry contains a representation of objects from a different registry (blocks have item representations to obtain the blocks in the inventory).</p>
+</div>
+<p>When <code>#tag</code> is called, a <code>TagAppender</code> is created which acts as a chainable consumer of elements to add to the tag:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>add</code></td>
+<td align="left">Adds an object to a tag through its resource key.</td>
+</tr>
+<tr>
+<td align="center"><code>addOptional</code></td>
+<td align="left">Adds an object to a tag through its name. If the object is not present, then the object will be skipped when loading.</td>
+</tr>
+<tr>
+<td align="center"><code>addTag</code></td>
+<td align="left">Adds a tag to a tag through its tag key. All elements within the inner tag are now a part of the outer tag.</td>
+</tr>
+<tr>
+<td align="center"><code>addOptionalTag</code></td>
+<td align="left">Adds a tag to a tag through its name. If the tag is not present, then the tag will be skipped when loading.</td>
+</tr>
+<tr>
+<td align="center"><code>replace</code></td>
+<td align="left">When <code>true</code>, all previously loaded entries added to this tag from other datapacks will be discarded. If a datapack is loaded after this one, then it will still append the entries to the tag.</td>
+</tr>
+<tr>
+<td align="center"><code>remove</code></td>
+<td align="left">Removes an object or tag from a tag through its name or key.</td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight"><code class="language-java">// In some TagProvider#addTags
+this.tag(EXAMPLE_TAG)
+  .add(EXAMPLE_OBJECT) // Adds an object to the tag
+  .addOptional(new ResourceLocation("othermod", "other_object")) // Adds an object from another mod to the tag
+
+this.tag(EXAMPLE_TAG_2)
+  .addTag(EXAMPLE_TAG) // Adds a tag to the tag
+  .remove(EXAMPLE_OBJECT) // Removes an object from this tag</code></pre>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If the mod&rsquo;s tags softly depends on another mod&rsquo;s tags (the other mod may or may not be present at runtime), the other mods&rsquo; tags should be referenced using the optional methods.</p>
+</div>
+<h3 id="existing-providers">Existing Providers<a class="headerlink" href="#existing-providers" title="Permanent link"> </a></h3>
+<p>Minecraft contains a few tag providers for certain registries that can be subclassed instead. Additionally, some providers contain additional helper methods to more easily create tags.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Registry Object Type</th>
+<th align="left">Tag Provider</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Block</code></td>
+<td align="left"><code>BlockTagsProvider</code>*</td>
+</tr>
+<tr>
+<td align="center"><code>Item</code></td>
+<td align="left"><code>ItemTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>EntityType</code></td>
+<td align="left"><code>EntityTypeTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Fluid</code></td>
+<td align="left"><code>FluidTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>GameEvent</code></td>
+<td align="left"><code>GameEventTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Biome</code></td>
+<td align="left"><code>BiomeTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>FlatLevelGeneratorPreset</code></td>
+<td align="left"><code>FlatLevelGeneratorPresetTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>WorldPreset</code></td>
+<td align="left"><code>WorldPresetTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Structure</code></td>
+<td align="left"><code>StructureTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>PoiType</code></td>
+<td align="left"><code>PoiTypeTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>BannerPattern</code></td>
+<td align="left"><code>BannerPatternTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>CatVariant</code></td>
+<td align="left"><code>CatVariantTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>PaintingVariant</code></td>
+<td align="left"><code>PaintingVariantTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Instrument</code></td>
+<td align="left"><code>InstrumentTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>DamageType</code></td>
+<td align="left"><code>DamageTypeTagsProvider</code></td>
+</tr>
+</tbody>
+</table>
+<p>* <code>BlockTagsProvider</code> is a Forge added <code>TagsProvider</code>.</p>
+<h4 id="itemtagsprovidercopy"><code>ItemTagsProvider#copy</code><a class="headerlink" href="#itemtagsprovidercopy" title="Permanent link"> </a></h4>
+<p>Blocks have item representations to obtain them in the inventory. As such, many of the block tags can also be an item tag. To easily generate item tags to have the same entries as block tags, the <code>#copy</code> method can be used which takes in the block tag to copy from and the item tag to copy to.</p>
+<pre class="highlight"><code class="language-java">//In ItemTagsProvider#addTags
+this.copy(EXAMPLE_BLOCK_TAG, EXAMPLE_ITEM_TAG);</code></pre>
+<h2 id="custom-tag-providers">Custom Tag Providers<a class="headerlink" href="#custom-tag-providers" title="Permanent link"> </a></h2>
+<p>A custom tag provider can be created via a <code>TagsProvider</code> subclass which takes in the registry key to generate tags for.</p>
+<pre class="highlight"><code class="language-java">public RecipeTypeTagsProvider(PackOutput output, CompletableFuture&lt;HolderLookup.Provider&gt; registries, ExistingFileHelper fileHelper) {
+  super(output, Registries.RECIPE_TYPE, registries, MOD_ID, fileHelper);
+}</code></pre>
+<h3 id="intrinsic-holder-tags-providers">Intrinsic Holder Tags Providers<a class="headerlink" href="#intrinsic-holder-tags-providers" title="Permanent link"> </a></h3>
+<p>One special type of <code>TagProvider</code>s are <code>IntrinsicHolderTagsProvider</code>s. When creating a tag using this provider via <code>#tag</code>, the object itself can be used to add itself to the tag via <code>#add</code>. To do so, a function is provided within the constructor to turn an object into its <code>ResourceKey</code>.</p>
+<pre class="highlight"><code class="language-java">// Subtype of `IntrinsicHolderTagsProvider`
+public AttributeTagsProvider(PackOutput output, CompletableFuture&lt;HolderLookup.Provider&gt; registries, ExistingFileHelper fileHelper) {
+  super(
+    output,
+    ForgeRegistries.Keys.ATTRIBUTES,
+    registries,
+    attribute -&gt; ForgeRegistries.ATTRIBUTES.getResourceKey(attribute).get(),
+    MOD_ID,
+    fileHelper
+  );
+}</code></pre>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

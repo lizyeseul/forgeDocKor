@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conditional - Forge modding 비공식 한글 문서</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../../images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../../images/manifest.json">
+    <link rel="mask-icon" href="../../../../images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../../images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../css/styles_common.css">
+    <link rel="stylesheet" href="../../../../css/styles_dark.css?version=2" data-theme="dark">
+    <link rel="stylesheet" href="../../../../css/styles_light.css?version=2" data-theme="light">
+
+    
+    <link href="../../../../css/version_warning_fix.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="../../../../js/theme-switch.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../../js/theme.js"></script>
+
+    <script>var base_url = '../../../..';</script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../../../ko" class="logo-image"><img src="../../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="https://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+
+        
+        <form role="search" id="rtd-search-form" class="search" action="../../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+
+        <!-- Site language selector -->
+        
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../ko/" hreflang="ko" class="md-select__link">
+                                한국어
+                            </a>
+                        </li>
+                    
+                        <li class="md-select__item">
+                            <a href="../../../../en/" hreflang="en" class="md-select__link">
+                                English
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <!-- <h2 class="sidebar-heading">
+                    <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Docs:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/latest" selected>MinecraftForge</option>
+                            
+                        </select>
+                    </form>
+                </h2> -->
+                <h2 class="sidebar-heading">
+                    <form class="version-selection">
+                        <label for="version-selection-dropdown">Version:</label>
+                        <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
+                            
+                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            
+                        </select>
+                    </form>
+                </h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/" class="elem-text">홈</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li >
+    
+    <a href="../../../../ko/contributing/" class="elem-text">기여자</a>
+    
+    
+</li>
+
+
+                    
+                    
+
+<li class="elem-parent">
+    
+    <a href="#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 시작하기</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/" class="elem-text">소개</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/structuring/" class="elem-text">구조</a>
+    
+    
+</li>
+
+
+        
+        
+
+<li >
+    
+    <a href="../../../../ko/gettingstarted/versioning/" class="elem-text">버전</a>
+    
+    
+</li>
+
+
+        
+    </ul>
+</li>
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="conditionally-loaded-data">Conditionally-Loaded Data<a class="headerlink" href="#conditionally-loaded-data" title="Permanent link"> </a></h1>
+<p>There are times when modders may want to include data-driven objects using information from another mod without having to explicitly make that mod a dependency. Other cases may be to swap out certain objects with other modded entries when they are present. This can be done through the conditional subsystem.</p>
+<h2 id="implementations">Implementations<a class="headerlink" href="#implementations" title="Permanent link"> </a></h2>
+<p>Currently, conditional loading is implemented for recipes and advancements. For any conditional recipe or advancement, a list of conditions to datum pair is loaded. If the conditions specified for a datum in the list is true, then that datum is returned. Otherwise, the datum is discarded.</p>
+<pre class="highlight"><code class="language-js">{
+  // The type needs to be specified for recipes as they can have custom serializers
+  // Advancements do not need this type
+  "type": "forge:conditional",
+
+  "recipes": [ // Or 'advancements' for Advancements
+    {
+      // The conditions to check
+      "conditions": [
+        // Conditions in the list are ANDed together
+        {
+          // Condition 1
+        },
+        {
+          // Condition 2
+        }
+      ],
+      "recipe": { // Or 'advancement' for Advancements
+        // The recipe to use if all conditions succeed
+      }
+    },
+    {
+      // Next condition to check if the previous fails
+    },
+  ]
+}</code></pre>
+<p>Conditionally-loaded data additionally have wrappers for <a href="../../../datagen/server/recipes/">data generation</a> through <code>ConditionalRecipe$Builder</code> and <code>ConditionalAdvancement$Builder</code>.</p>
+<h2 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link"> </a></h2>
+<p>Conditions are specified by setting <code>type</code> to the name of the condition as specified by <a href="#iconditionserializer"><code>IConditionSerializer#getID</code></a>.</p>
+<h3 id="true-and-false">True and False<a class="headerlink" href="#true-and-false" title="Permanent link"> </a></h3>
+<p>Boolean conditions consist of no data and return the expected value of the condition. They are represented by <code>forge:true</code> and <code>forge:false</code>.</p>
+<pre class="highlight"><code class="language-js">// For some condition
+{
+  // Will always return true (or false for 'forge:false')
+  "type": "forge:true"
+}</code></pre>
+<h3 id="not-and-and-or">Not, And, and Or<a class="headerlink" href="#not-and-and-or" title="Permanent link"> </a></h3>
+<p>Boolean operator conditions consist of the condition(s) being operated upon and apply the following logic. They are represented by <code>forge:not</code>, <code>forge:and</code>, and <code>forge:or</code>.</p>
+<pre class="highlight"><code class="language-js">// For some condition
+{
+  // Inverts the result of the stored condition
+  "type": "forge:not",
+  "value": {
+    // A condition
+  }
+}</code></pre>
+<pre class="highlight"><code class="language-js">// For some condition
+{
+  // ANDs the stored conditions together (or ORs for 'forge:or')
+  "type": "forge:and",
+  "values": [
+    {
+      // First condition
+    },
+    {
+      // Second condition to be ANDed (or ORed for 'forge:or')
+    }
+  ]
+}</code></pre>
+<h3 id="mod-loaded">Mod Loaded<a class="headerlink" href="#mod-loaded" title="Permanent link"> </a></h3>
+<p><code>ModLoadedCondition</code> returns true whenever the specified mod with the given id is loaded in the current application. This is represented by <code>forge:mod_loaded</code>.</p>
+<pre class="highlight"><code class="language-js">// For some condition
+{
+  "type": "forge:mod_loaded",
+   // Returns true if 'examplemod' is loaded
+  "modid": "examplemod"
+}</code></pre>
+<h3 id="item-exists">Item Exists<a class="headerlink" href="#item-exists" title="Permanent link"> </a></h3>
+<p><code>ItemExistsCondition</code> returns true whenever the given item has been registered in the current application. This is represented by <code>forge:item_exists</code>.</p>
+<pre class="highlight"><code class="language-js">// For some condition
+{
+  "type": "forge:item_exists",
+   // Returns true if 'examplemod:example_item' has been registered
+  "item": "examplemod:example_item"
+}</code></pre>
+<h3 id="tag-empty">Tag Empty<a class="headerlink" href="#tag-empty" title="Permanent link"> </a></h3>
+<p><code>TagEmptyCondition</code> returns true whenever the given item tag has no items within it. This is represented by <code>forge:tag_empty</code>.</p>
+<pre class="highlight"><code class="language-js">// For some condition
+{
+  "type": "forge:tag_empty",
+   // Returns true if 'examplemod:example_tag' is an item tag with no entries
+  "tag": "examplemod:example_tag"
+}</code></pre>
+<h2 id="creating-custom-conditions">Creating Custom Conditions<a class="headerlink" href="#creating-custom-conditions" title="Permanent link"> </a></h2>
+<p>Custom conditions can be created by implementing <code>ICondition</code> and its associated <code>IConditionSerializer</code>.</p>
+<h3 id="icondition">ICondition<a class="headerlink" href="#icondition" title="Permanent link"> </a></h3>
+<p>Any condition only need to implement two methods:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">getID</td>
+<td align="left">The registry name of the condition. Must be equivalent to <a href="#iconditionserializer"><code>IConditionSerializer#getID</code></a>. Used only for <a href="../../../datagen/server/recipes/">data generation</a>.</td>
+</tr>
+<tr>
+<td align="center">test</td>
+<td align="left">Returns true if the condition has been satisfied.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every <code>#test</code> has access to some <code>IContext</code> representing the state of the game. Currently, only tags can be obtained from a registry.</p>
+</div>
+<h3 id="iconditionserializer">IConditionSerializer<a class="headerlink" href="#iconditionserializer" title="Permanent link"> </a></h3>
+<p>Serializers need to implement three methods:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">getID</td>
+<td align="left">The registry name of the condition. Must be equivalent to <a href="#icondition"><code>ICondition#getID</code></a>.</td>
+</tr>
+<tr>
+<td align="center">read</td>
+<td align="left">Reads the condition data from JSON.</td>
+</tr>
+<tr>
+<td align="center">write</td>
+<td align="left">Writes the given condition data to JSON.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Condition serializers are not responsible for writing or reading the type of the serializer, similar to other serializer implementations in Minecraft.</p>
+</div>
+<p>Afterwards, a static instance should be declared to hold the initialized serializer and then registered using <code>CraftingHelper#register</code> either during the <code>RegisterEvent</code> for <code>RecipeSerializer</code>s or during <code>FMLCommonSetupEvent</code>.</p>
+<pre class="highlight"><code class="language-java">// In some serializer class
+public static final ExampleConditionSerializer INSTANCE = new ExampleConditionSerializer();
+
+// In some handler class
+public void registerSerializers(RegisterEvent event) {
+  event.register(ForgeRegistries.Keys.RECIPE_SERIALIZERS,
+    helper -&gt; CraftingHelper.register(INSTANCE)
+  );
+}</code></pre>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If using <code>FMLCommonSetupEvent</code> to register a condition serializer, it must be enqueued to the synchronous work queue via <code>FMLCommonSetupEvent#enqueueWork</code> as <code>CraftingHelper#register</code> is not thread-safe.</p>
+</div>
+            
+        </article>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
