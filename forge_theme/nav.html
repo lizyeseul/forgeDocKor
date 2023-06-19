@@ -1,3 +1,4 @@
+{% if nav_item.lang == page.lang %}
 {% if not nav_item.children %}
 <li {% if nav_item.active %}class="elem-active{% if page.toc %} elem-toc{% endif %}" {% endif %}>
     {% if nav_item.active %}
@@ -31,4 +32,5 @@
         {% endfor %}
     </ul>
 </li>
+{% endif %}
 {% endif %}

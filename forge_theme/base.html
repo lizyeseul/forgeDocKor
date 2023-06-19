@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,9 @@
     <meta name="msapplication-config" content="{{ base_url }}/images/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ base_url }}/css/styles_common.css">
     <link rel="stylesheet" href="{{ base_url }}/css/styles_dark.css?version=2" data-theme="dark">
     <link rel="stylesheet" href="{{ base_url }}/css/styles_light.css?version=2" data-theme="light">
 
@@ -61,13 +63,14 @@
     <div class="wrapper">
         <div class="logo">
             <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
-            <a href="{{ base_url }}" class="logo-image"><img src="{{ base_url }}/images/logo.svg" width="244"></a>
+            <a href="{{ base_url }}/{{ config.theme.language }}" class="logo-image"><img src="{{ base_url }}/images/logo.svg" width="244"></a>
         </div>
         <nav>
             <ul class="links clearfix">
                 <li><a href="https://minecraftforge.net/">Forums</a></li>
             </ul>
         </nav>
+
         {% block search_form %}
         <form role="search" id="rtd-search-form" class="search" action="{{ base_url }}/search.html" method="get">
             <input type="submit" value="&#xf002;">
@@ -76,29 +79,53 @@
             </div>
         </form>
         {% endblock %}
+
+        <!-- Site language selector -->
+        {% if config.extra.alternate %}
+        <div class="md-header__option">
+            <div class="md-select">
+                <button class="md-header__button" aria-label="language">
+                    <div class="md-icon">
+                        <i class="fa-solid fa-globe fa-lg" style="color: #e0e0e0;"></i>
+                    </div>
+                </button>
+                <div class="md-select__inner">
+                    <ul class="md-select__list">
+                    {% for alt in config.extra.alternate %}
+                        <li class="md-select__item">
+                            <a href="{{ base_url }}/{{ alt.link }}" hreflang="{{ alt.lang }}" class="md-select__link">
+                                {{ alt.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+         </div>
+        {% endif %}
     </div>
 </header>
 <main class="wrapper sidebar-wrapper">
     <div class="sidebar-left sidebar-sticky">
         <aside>
             <section class="sidebar-nav">
-                <h2 class="sidebar-heading">
+                <!-- <h2 class="sidebar-heading">
                     <a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> Navigation
                     <form class="version-selection">
                         <label for="version-selection-dropdown">Docs:</label>
                         <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
                             {% for name, url in config.extra.types.items() %}
-                            <option value="https://docs.minecraftforge.net/en/{{ url }}" {% if name == config.extra.current_type %}selected{% endif %}>{{ name }}</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/ko/{{ url }}" {% if name == config.extra.current_type %}selected{% endif %}>{{ name }}</option>
                             {% endfor %}
                         </select>
                     </form>
-                </h2>
+                </h2> -->
                 <h2 class="sidebar-heading">
                     <form class="version-selection">
                         <label for="version-selection-dropdown">Version:</label>
                         <select id="version-selection-dropdown" class="version-selection-dropdown" onchange="location = this.value;">
                             {% for name, url in config.extra.versions.items() %}
-                            <option value="https://docs.minecraftforge.net/en/{{ url }}" {% if name == config.extra.current_version %}selected{% endif %}>{{ name }}</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/{{ url }}" {% if name == config.extra.current_version %}selected{% endif %}>{{ name }}</option>
                             {% endfor %}
                         </select>
                     </form>
@@ -134,7 +161,7 @@
 </main>
 <div class="wrapper">
     <footer>
-        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme.
         <div class="theme-switch-wrapper">
             Enable Dark Theme
             <label class="theme-switch">

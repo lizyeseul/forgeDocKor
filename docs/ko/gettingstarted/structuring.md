@@ -72,7 +72,7 @@ If any string is specified as `${file.jarVersion}`, Forge will replace the strin
 |        modid  |  string  | mandatory         | The modid this file is linked to. |
 |      version  |  string  | mandatory         | The version of the mod. It should be just numbers separated by dots, ideally conforming to Forge's [Semantic Versioning][versioning] structure. |
 |  displayName  |  string  | mandatory         | The user-friendly name of this mod. |
-| updateJSONURL |  string  |   `""`            | The URL to a [version JSON][updatechecker]. |
+| updateJSONURL |  string  |   `""`            | The URL to a version JSONupdatechecker. |
 |   displayURL  |  string  |   `""`            | A link to the mod's homepage. |
 |     logoFile  |  string  |   `""`            | The filename of the mod's logo. It must be placed in the root resource folder, not in a subfolder. |
 |      credits  |  string  |   `""`            | A string that contains any acknowledgements you want to mention. |

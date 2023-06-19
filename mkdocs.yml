@@ -1,104 +1,8 @@
-# If you add a page, you must add it to the index here
-nav:
-  - Home: 'index.md'
-  - Contributing to the Docs: 'contributing.md'
-  - Getting Started:
-    - Introduction: 'gettingstarted/index.md'
-    - The Mod Files: 'gettingstarted/modfiles.md'
-    - Structuring Your Mod: 'gettingstarted/structuring.md'
-    - Versioning: 'gettingstarted/versioning.md'
-  - Core Concepts:
-    - Registries: 'concepts/registries.md'
-    - Sides: 'concepts/sides.md'
-    - Events: 'concepts/events.md'
-    - Mod Lifecycle: 'concepts/lifecycle.md'
-    - Resources: 'concepts/resources.md'
-    - Internationalization: 'concepts/internationalization.md'
-  - Blocks:
-    - Introduction: 'blocks/index.md'
-    - Block States: 'blocks/states.md'
-  - Items:
-    - Introduction: 'items/index.md'
-    - BlockEntityWithoutLevelRenderer: 'items/bewlr.md'
-  - Networking:
-    - Introduction: 'networking/index.md'
-    - SimpleImpl: 'networking/simpleimpl.md'
-    - Synchronizing Entities: 'networking/entities.md'
-  - Block Entities:
-    - Introduction: 'blockentities/index.md'
-    - BlockEntityRenderer: 'blockentities/ber.md'
-  - Game Effects:
-    - Particles: 'gameeffects/particles.md'
-    - Sounds: 'gameeffects/sounds.md'
-  - Data Storage:
-    - Capabilities: 'datastorage/capabilities.md'
-    - Saved Data: 'datastorage/saveddata.md'
-    - Codecs: 'datastorage/codecs.md'
-  - Graphical User Interfaces:
-    - Menus: 'gui/menus.md'
-    - Screens: 'gui/screens.md'
-  - Rendering:
-    - Model Extensions:
-      - Introduction: 'rendering/modelextensions/index.md'
-      - Root Transforms: 'rendering/modelextensions/transforms.md'
-      - Render Types: 'rendering/modelextensions/rendertypes.md'
-      - Part Visibility: 'rendering/modelextensions/visibility.md'
-      - Face Data: 'rendering/modelextensions/facedata.md'
-    - Model Loaders:
-      - Introduction: 'rendering/modelloaders/index.md'
-      - Baked Model: 'rendering/modelloaders/bakedmodel.md'
-      - Transform: 'rendering/modelloaders/transform.md'
-      - Item Overrides: 'rendering/modelloaders/itemoverrides.md'
-  - Resources:
-    - Client Assets:
-      - Introduction: 'resources/client/index.md'
-      - Models:
-        - Introduction: 'resources/client/models/index.md'
-        - Texture Tinting: 'resources/client/models/tinting.md'
-        - Item Properties: 'resources/client/models/itemproperties.md'
-    - Server Data:
-      - Introduction: 'resources/server/index.md'
-      - Recipes:
-        - Introduction: 'resources/server/recipes/index.md'
-        - Custom Recipes: 'resources/server/recipes/custom.md'
-        - Ingredients: 'resources/server/recipes/ingredients.md'
-        - Non-Datapack Recipes:  'resources/server/recipes/incode.md'
-      - Loot Tables: 'resources/server/loottables.md'
-      - Global Loot Modifiers: 'resources/server/glm.md'
-      - Tags: 'resources/server/tags.md'
-      - Advancements: 'resources/server/advancements.md'
-      - Conditionally-Loaded Data: 'resources/server/conditional.md'
-  - Data Generation:
-    - Introduction: 'datagen/index.md'
-    - Client Assets:
-      - Model Providers: 'datagen/client/modelproviders.md'
-      - Language Providers: 'datagen/client/localization.md'
-      - Sound Providers: 'datagen/client/sounds.md'
-    - Server Data:
-      - Recipe Providers: 'datagen/server/recipes.md'
-      - Loot Table Providers: 'datagen/server/loottables.md'
-      - Tag Providers: 'datagen/server/tags.md'
-      - Advancement Providers: 'datagen/server/advancements.md'
-      - Global Loot Modifier Providers: 'datagen/server/glm.md'
-      - Datapack Registry Object Providers: 'datagen/server/datapackregistries.md'
-  - Miscellaneous Features:
-    - Configuration: 'misc/config.md'
-    - Key Mappings: 'misc/keymappings.md'
-    - Game Tests: 'misc/gametest.md'
-    - Forge Update Checker: 'misc/updatechecker.md'
-    - Debug Profiler: 'misc/debugprofiler.md'
-  - Advanced Topics:
-    - Access Transformers: 'advanced/accesstransformers.md'
-  - Contributing to Forge:
-    - Introduction: 'forgedev/index.md'
-    - Pull Request Guidelines: 'forgedev/prguidelines.md'
-  - Legacy Versions:
-    - Introduction: 'legacy/index.md'
-    - Porting to This Version: 'legacy/porting.md'
+
 
 # Do not edit in PRs below here
-site_name: Forge modding 한글 문서
-site_url: https://forgedockor.readthedocs.io/
+site_name: Forge modding 비공식 한글 문서
+site_url: https://lizyeseul.github.io/forgeDocKor/
 
 markdown_extensions:
   - admonition
@@ -109,24 +13,150 @@ markdown_extensions:
       use_pygments: false
   - toc:
       permalink: ' '
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 theme:
-  name: readthedocs
+  name: material
   custom_dir: forge_theme
+  language: ko
 
 extra:
   current_type: MinecraftForge
   types:
     MinecraftForge: latest
-    ForgeGradle: fg-6.x
+    # ForgeGradle: fg-6.x
   current_version: 1.19.x
   versions:
     1.18.x: 1.18.x
     1.19.x: 1.19.x
     main: main
+  alternate:
+    - name: 한국어
+      link: ko/ 
+      lang: ko
+    - name: English
+      link: en/
+      lang: en
 
 extra_css:
   - css/version_warning_fix.css
 
 hooks:
   - pre_build.py
+
+# nav:
+#   - 홈: 'ko/index.md'
+#   - 기여자: 'ko/contributing.md'
+#   - 시작하기:
+#     - Introduction: 'ko/gettingstarted/index.md'
+#     - Structuring Your Mod: 'ko/gettingstarted/structuring.md'
+#     - Versioning: 'ko/gettingstarted/versioning.md'
+
+
+
+nav:
+  - ko:
+    - 홈: 'index.md'
+    - 기여자: 'contributing.md'
+    - 시작하기:
+      - 소개: 'gettingstarted/index.md'
+      - 구조: 'gettingstarted/structuring.md'
+      - 버전: 'gettingstarted/versioning.md'
+  - en:
+    - Home: 'index.md'
+    - Contributing to the Docs: 'contributing.md'
+    - Getting Started:
+      - Introduction: 'gettingstarted/index.md'
+      - Structuring Your Mod: 'gettingstarted/structuring.md'
+      - Versioning: 'gettingstarted/versioning.md'
+
+  # - Core Concepts:
+  #   - Registries: 'concepts/registries.md'
+  #   - Sides: 'concepts/sides.md'
+  #   - Events: 'concepts/events.md'
+  #   - Mod Lifecycle: 'concepts/lifecycle.md'
+  #   - Resources: 'concepts/resources.md'
+  #   - Internationalization: 'concepts/internationalization.md'
+  # - Blocks:
+  #   - Introduction: 'blocks/index.md'
+  #   - Block States: 'blocks/states.md'
+  # - Items:
+  #   - Introduction: 'items/index.md'
+  #   - BlockEntityWithoutLevelRenderer: 'items/bewlr.md'
+  # - Networking:
+  #   - Introduction: 'networking/index.md'
+  #   - SimpleImpl: 'networking/simpleimpl.md'
+  #   - Synchronizing Entities: 'networking/entities.md'
+  # - Block Entities:
+  #   - Introduction: 'blockentities/index.md'
+  #   - BlockEntityRenderer: 'blockentities/ber.md'
+  # - Game Effects:
+  #   - Particles: 'gameeffects/particles.md'
+  #   - Sounds: 'gameeffects/sounds.md'
+  # - Data Storage:
+  #   - Capabilities: 'datastorage/capabilities.md'
+  #   - Saved Data: 'datastorage/saveddata.md'
+  #   - Codecs: 'datastorage/codecs.md'
+  # - Graphical User Interfaces:
+  #   - Menus: 'gui/menus.md'
+  #   - Screens: 'gui/screens.md'
+  # - Rendering:
+  #   - Model Extensions:
+  #     - Introduction: 'rendering/modelextensions/index.md'
+  #     - Root Transforms: 'rendering/modelextensions/transforms.md'
+  #     - Render Types: 'rendering/modelextensions/rendertypes.md'
+  #     - Part Visibility: 'rendering/modelextensions/visibility.md'
+  #     - Face Data: 'rendering/modelextensions/facedata.md'
+  #   - Model Loaders:
+  #     - Introduction: 'rendering/modelloaders/index.md'
+  #     - Baked Model: 'rendering/modelloaders/bakedmodel.md'
+  #     - Transform: 'rendering/modelloaders/transform.md'
+  #     - Item Overrides: 'rendering/modelloaders/itemoverrides.md'
+  # - Resources:
+  #   - Client Assets:
+  #     - Introduction: 'resources/client/index.md'
+  #     - Models:
+  #       - Introduction: 'resources/client/models/index.md'
+  #       - Texture Tinting: 'resources/client/models/tinting.md'
+  #       - Item Properties: 'resources/client/models/itemproperties.md'
+  #   - Server Data:
+  #     - Introduction: 'resources/server/index.md'
+  #     - Recipes:
+  #       - Introduction: 'resources/server/recipes/index.md'
+  #       - Custom Recipes: 'resources/server/recipes/custom.md'
+  #       - Ingredients: 'resources/server/recipes/ingredients.md'
+  #       - Non-Datapack Recipes:  'resources/server/recipes/incode.md'
+  #     - Loot Tables: 'resources/server/loottables.md'
+  #     - Global Loot Modifiers: 'resources/server/glm.md'
+  #     - Tags: 'resources/server/tags.md'
+  #     - Advancements: 'resources/server/advancements.md'
+  #     - Conditionally-Loaded Data: 'resources/server/conditional.md'
+  # - Data Generation:
+  #   - Introduction: 'datagen/index.md'
+  #   - Client Assets:
+  #     - Model Providers: 'datagen/client/modelproviders.md'
+  #     - Language Providers: 'datagen/client/localization.md'
+  #     - Sound Providers: 'datagen/client/sounds.md'
+  #   - Server Data:
+  #     - Recipe Providers: 'datagen/server/recipes.md'
+  #     - Loot Table Providers: 'datagen/server/loottables.md'
+  #     - Tag Providers: 'datagen/server/tags.md'
+  #     - Advancement Providers: 'datagen/server/advancements.md'
+  #     - Global Loot Modifier Providers: 'datagen/server/glm.md'
+  #     - Datapack Registry Object Providers: 'datagen/server/datapackregistries.md'
+  # - Miscellaneous Features:
+  #   - Configuration: 'misc/config.md'
+  #   - Key Mappings: 'misc/keymappings.md'
+  #   - Game Tests: 'misc/gametest.md'
+  #   - Forge Update Checker: 'misc/updatechecker.md'
+  #   - Debug Profiler: 'misc/debugprofiler.md'
+  # - Advanced Topics:
+  #   - Access Transformers: 'advanced/accesstransformers.md'
+  # - Contributing to Forge:
+  #   - Introduction: 'forgedev/index.md'
+  #   - Pull Request Guidelines: 'forgedev/prguidelines.md'
+  # - Legacy Versions:
+  #   - Introduction: 'legacy/index.md'
+  #   - Porting to This Version: 'legacy/porting.md'
