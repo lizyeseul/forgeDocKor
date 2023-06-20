@@ -1,8 +1,6 @@
-
-
 # Do not edit in PRs below here
 site_name: Forge modding 비공식 한글 문서
-site_url: https://lizyeseul.github.io/forgeDocKor/
+site_url: https://lizyeseul.github.io/forgeDocKor/1.19.x
 
 markdown_extensions:
   - admonition
@@ -46,16 +44,6 @@ extra_css:
 hooks:
   - pre_build.py
 
-# nav:
-#   - 홈: 'ko/index.md'
-#   - 기여자: 'ko/contributing.md'
-#   - 시작하기:
-#     - Introduction: 'ko/gettingstarted/index.md'
-#     - Structuring Your Mod: 'ko/gettingstarted/structuring.md'
-#     - Versioning: 'ko/gettingstarted/versioning.md'
-
-
-
 nav:
   - ko:
     - 홈: 'index.md'
@@ -69,6 +57,7 @@ nav:
     - Contributing to the Docs: 'contributing.md'
     - Getting Started:
       - Introduction: 'gettingstarted/index.md'
+      - The Mod Files: 'gettingstarted/modfiles.md'
       - Structuring Your Mod: 'gettingstarted/structuring.md'
       - Versioning: 'gettingstarted/versioning.md'
     - Core Concepts:
