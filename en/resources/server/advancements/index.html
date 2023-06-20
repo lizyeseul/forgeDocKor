@@ -122,9 +122,7 @@
                             
                             <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
                             
-                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
-                            
-                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.20.x" >1.19.x</option>
                             
                         </select>
                     </form>
@@ -1275,17 +1273,17 @@
 <p>Custom criteria triggers can be created by implementing <code>SimpleCriterionTrigger</code> for the created <code>AbstractCriterionTriggerInstance</code> subclass.</p>
 <h3 id="abstractcriteriontriggerinstance-subclass">AbstractCriterionTriggerInstance Subclass<a class="headerlink" href="#abstractcriteriontriggerinstance-subclass" title="Permanent link"> </a></h3>
 <p>The <code>AbstractCriterionTriggerInstance</code> represents a single criteria defined in the <code>criteria</code> object. Trigger instances are responsible for holding the defined conditions, returning whether the inputs match the condition, and writing the instance to JSON for data generation.</p>
-<p>Conditions are usually passed in through the constructor. The <code>AbstractCriterionTriggerInstance</code> super constructor requires the instance to define the registry name of the trigger and the conditions the player must meet as an <code>EntityPredicate$Composite</code>. The registry name of the trigger should be supplied to the super directly while the conditions of the player should be a constructor parameter.</p>
+<p>Conditions are usually passed in through the constructor. The <code>AbstractCriterionTriggerInstance</code> super constructor requires the instance to define the registry name of the trigger and the conditions the player must meet as an <code>ContextAwarePredicate</code>. The registry name of the trigger should be supplied to the super directly while the conditions of the player should be a constructor parameter.</p>
 <pre class="highlight"><code class="language-java">// Where ID is the registry name of the trigger
-public ExampleTriggerInstance(EntityPredicate.Composite player, ItemPredicate item) {
+public ExampleTriggerInstance(ContextAwarePredicate player, ItemPredicate item) {
   super(ID, player);
   // Store the item condition that must be met
 }</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Typically, trigger instances have a static constructor which allow these instances to be easily created for data generation. These static factory methods can also be statically imported instead of the class itself.</p>
-<pre class="highlight"><code class="language-java">public static ExampleTriggerInstance instance(EntityPredicate.Builder playerBuilder, ItemPredicate.Builder itemBuilder) {
-  return new ExampleTriggerInstance(EntityPredicate.Composite.wrap(playerBuilder.build()), itemBuilder.build());
+<pre class="highlight"><code class="language-java">public static ExampleTriggerInstance instance(ContextAwarePredicate player, ItemPredicate item) {
+  return new ExampleTriggerInstance(player, item);
 }</code></pre>
 </div>
 <p>Additionally, the <code>#serializeToJson</code> method should be overridden. The method should add the conditions of the instance to the other JSON data.</p>
@@ -1306,7 +1304,7 @@ public boolean matches(ItemStack stack) {
 <p>The registry name of the trigger is supplied to <code>#getId</code>. This should match the registry name supplied to the trigger instance.</p>
 <p>A trigger instance is created via <code>#createInstance</code>. This method reads a criteria from JSON.</p>
 <pre class="highlight"><code class="language-java">@Override
-public ExampleTriggerInstance createInstance(JsonObject json, EntityPredicate.Composite player, DeserializationContext context) {
+public ExampleTriggerInstance createInstance(JsonObject json, ContextAwarePredicate player, DeserializationContext context) {
   // Read conditions from JSON: item
   return new ExampleTriggerInstance(player, item);
 }</code></pre>

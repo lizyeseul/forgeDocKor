@@ -122,9 +122,7 @@
                             
                             <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
                             
-                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
-                            
-                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.20.x" >1.19.x</option>
                             
                         </select>
                     </form>
@@ -1247,10 +1245,10 @@
 <h2 id="data-driven-tables">Data-Driven Tables<a class="headerlink" href="#data-driven-tables" title="Permanent link"> </a></h2>
 <p>Most loot tables within vanilla are data driven via JSON. This means that a mod is not necessary to create a new loot table, only a <a href="https://minecraft.fandom.com/wiki/Data_pack">Data pack</a>. A full list on how to create and put these loot tables within the mod&rsquo;s <code>resources</code> folder can be found on the <a href="https://minecraft.fandom.com/wiki/Loot_table">Minecraft Wiki</a>.</p>
 <h2 id="using-a-loot-table">Using a Loot Table<a class="headerlink" href="#using-a-loot-table" title="Permanent link"> </a></h2>
-<p>A loot table is referenced by its <code>ResourceLocation</code> which points to <code>data/&lt;namespace&gt;/loot_tables/&lt;path&gt;.json</code>. The <code>LootTable</code> associated with the reference can be obtained using <code>LootTables#get</code>, where <code>LootTables</code> can be obtained via <code>MinecraftServer#getLootTables</code>.</p>
-<p>A loot table is always generated within a given context. The <code>LootContext</code> defines the level the table is generated in, a specific randomizer and seed if desired, luck for better generation, the <code>LootContextParam</code>s which define scenario context, and any dynamic information that should occur on activation. A loot context can be created using the constructor for <code>LootContext$Builder</code> and built using <code>LootContext$Builder#create</code>.</p>
-<p>The created <code>LootContext</code> adheres to some <code>LootContextParamSet</code>. The param set defines which <code>LootContextParam</code>s are required or optional in context for generation. A loot table generated within a given param set must only use contexts that are defined.</p>
-<p>A <code>LootTable</code> can be used to generate <code>ItemStack</code>s using one of the available methods:</p>
+<p>A loot table is referenced by its <code>ResourceLocation</code> which points to <code>data/&lt;namespace&gt;/loot_tables/&lt;path&gt;.json</code>. The <code>LootTable</code> associated with the reference can be obtained using <code>LootDataResolver#getLootTable</code>, where <code>LootDataResolver</code> can be obtained via <code>MinecraftServer#getLootData</code>.</p>
+<p>A loot table is always generated with given parameters. The <code>LootParams</code> contains the level the table is generated in, luck for better generation, the <code>LootContextParam</code>s which define scenario context, and any dynamic information that should occur on activation. The <code>LootParams</code> can be created using the constructor of the <code>LootParams$Builder</code> builder, and built via <code>LootParams$Builder#create</code> by passing in the <code>LootContextParamSet</code>.</p>
+<p>A loot table may also have some context. The <code>LootContext</code> takes in the built <code>LootParams</code> and can set some random seeded instance. The context is created via the builder <code>LootContext$Builder</code> and built using <code>LootContext$Builder#create</code> by passing in a nullable <code>ResourceLocation</code> representing the random instance to use.</p>
+<p>A <code>LootTable</code> can be used to generate <code>ItemStack</code>s using one of the available methods which may take in a <code>LootParams</code> or a <code>LootContext</code>:</p>
 <table>
 <thead>
 <tr>

@@ -122,9 +122,7 @@
                             
                             <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
                             
-                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
-                            
-                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.20.x" >1.19.x</option>
                             
                         </select>
                     </form>
@@ -1252,7 +1250,7 @@
 <p>An installation of the Java 17 Development Kit (JDK) and 64-bit Java Virtual Machine (JVM). Forge recommends and officially supports <a href="https://adoptium.net/temurin/releases?version=17" title="Eclipse Temurin 17 Prebuilt Binaries">Eclipse Temurin</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Make sure you are using a 64-bit JVM. One way of checking is to run <code>java -version</code> in a terminal. Using a 32-bit JVM will cause some problems when using <a href="https://docs.minecraftforge.net/en/fg-5.x">ForgeGradle</a>.</p>
+<p>Make sure you are using a 64-bit JVM. One way of checking is to run <code>java -version</code> in a terminal. Using a 32-bit JVM will cause some problems when using <a href="https://docs.minecraftforge.net/en/fg-6.x">ForgeGradle</a>.</p>
 </div>
 </li>
 <li>
@@ -1290,7 +1288,7 @@
 </li>
 <li>Generate run configurations for your selected IDE:<ul>
 <li><strong>Eclipse</strong>: Run the <code>genEclipseRuns</code> task.</li>
-<li><strong>IntelliJ IDEA</strong>: Run the <code>genIntellijRuns</code> task. If a &ldquo;module not specified&rdquo; error occurs, set the <a href="https://docs.minecraftforge.net/en/fg-5.x/configuration/runs/"><code>ideaModule</code> property</a> to your &lsquo;main&rsquo; module (typically <code>${project.name}.main</code>).</li>
+<li><strong>IntelliJ IDEA</strong>: Run the <code>genIntellijRuns</code> task. If a &ldquo;module not specified&rdquo; error occurs, set the <a href="https://docs.minecraftforge.net/en/fg-6.x/configuration/runs/"><code>ideaModule</code> property</a> to your &lsquo;main&rsquo; module (typically <code>${project.name}.main</code>).</li>
 <li><strong>Visual Studio Code</strong>: Run the <code>getVSCodeRuns</code> task.</li>
 <li><strong>Other IDEs</strong>: You can run the configurations directly using <code>gradle run*</code> (e.g., <code>runClient</code>, <code>runServer</code>, <code>runData</code>, <code>runGameTestServer</code>). These can also be used with the supported IDEs.</li>
 </ul>
@@ -1300,20 +1298,13 @@
 <p>Edit the <code>build.gradle</code> file to customize how your mod is built (e.g., file name, artifact version, etc.).</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Do <strong>not</strong> edit the <code>settings.gradle</code> unless you know what you are doing. The file specifies the repository that <a href="https://docs.minecraftforge.net/en/fg-5.x">ForgeGradle</a> is uploaded to.</p>
+<p>Do <strong>not</strong> edit the <code>settings.gradle</code> unless you know what you are doing. The file specifies the repository that <a href="https://docs.minecraftforge.net/en/fg-6.x">ForgeGradle</a> is uploaded to.</p>
 </div>
 <h3 id="recommended-buildgradle-customizations">Recommended <code>build.gradle</code> Customizations<a class="headerlink" href="#recommended-buildgradle-customizations" title="Permanent link"> </a></h3>
 <h4 id="mod-id-replacement">Mod Id Replacement<a class="headerlink" href="#mod-id-replacement" title="Permanent link"> </a></h4>
 <p>Replace all occurrences of <code>examplemod</code>, including <a href="modfiles/"><code>mods.toml</code> and the main mod file</a> with the mod id of your mod. This also includes changing the name of the file you build by setting <code>base.archivesName</code> (this is typically set to your mod id).</p>
 <pre class="highlight"><code class="language-gradle">// In some build.gradle
 base.archivesName = 'mymod'</code></pre>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Forge MDK currently uses <code>archivesBaseName</code> to set the artifact name instead of <code>base.archivesName</code>. We recommend using <code>base.archivesName</code> instead as <code>archivesBaseName</code> is deprecated for removal in Gradle 9, which a future version of ForgeGradle will support.</p>
-<p>You can still use <code>archivesBaseName</code> by setting the following:</p>
-<pre class="highlight"><code class="language-gradle">// In some build.gradle
-base.archivesName = 'mymod'</code></pre>
-</div>
 <h4 id="group-id">Group Id<a class="headerlink" href="#group-id" title="Permanent link"> </a></h4>
 <p>The <code>group</code> property should be set to your <a href="structuring/#packaging">top-level package</a>, which should either be a domain you own or your email address:</p>
 <table>
@@ -1352,9 +1343,9 @@ group = 'com.example'</code></pre>
 <h4 id="version">Version<a class="headerlink" href="#version" title="Permanent link"> </a></h4>
 <p>Set the <code>version</code> property to the current version of your mod. We recommend using a <a href="versioning/">variation of Maven versioning</a>.</p>
 <pre class="highlight"><code class="language-gradle">// In some build.gradle
-version = '1.19.4-1.0.0.0'</code></pre>
+version = '1.20-1.0.0.0'</code></pre>
 <h3 id="additional-configurations">Additional Configurations<a class="headerlink" href="#additional-configurations" title="Permanent link"> </a></h3>
-<p>Additional configurations can be found on the <a href="https://docs.minecraftforge.net/en/fg-5.x">ForgeGradle</a> docs.</p>
+<p>Additional configurations can be found on the <a href="https://docs.minecraftforge.net/en/fg-6.x">ForgeGradle</a> docs.</p>
 <h2 id="building-and-testing-your-mod">Building and Testing Your Mod<a class="headerlink" href="#building-and-testing-your-mod" title="Permanent link"> </a></h2>
 <ol>
 <li>To build your mod, run <code>gradlew build</code>. This will output a file in <code>build/libs</code> with the name <code>[archivesBaseName]-[version].jar</code>, by default. This file can be placed in the <code>mods</code> folder of a Forge-enabled Minecraft setup or distributed.</li>

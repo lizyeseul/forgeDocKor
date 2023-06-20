@@ -122,9 +122,7 @@
                             
                             <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
                             
-                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
-                            
-                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.20.x" >1.19.x</option>
                             
                         </select>
                     </form>
@@ -515,8 +513,6 @@
         <li class="toc-subitem"><a href="#synchronizing-data-with-clients">Synchronizing Data with Clients</a></li>
         
         <li class="toc-subitem"><a href="#persisting-across-player-deaths">Persisting across Player Deaths</a></li>
-        
-        <li class="toc-subitem"><a href="#migrating-from-iextendedentityproperties">Migrating from IExtendedEntityProperties</a></li>
         
         
     </ul>
@@ -1361,21 +1357,6 @@ public interface IExampleCapability {
 <h2 id="persisting-across-player-deaths">Persisting across Player Deaths<a class="headerlink" href="#persisting-across-player-deaths" title="Permanent link"> </a></h2>
 <p>By default, the capability data does not persist on death. In order to change this, the data has to be manually copied when the player entity is cloned during the respawn process.</p>
 <p>This can be done via <code>PlayerEvent$Clone</code> by reading the data from the original entity and assigning it to the new entity. In this event, the <code>#isWasDeath</code> method can be used to distinguish between respawning after death and returning from the End. This is important because the data will already exist when returning from the End, so care has to be taken to not duplicate values in this case.</p>
-<h2 id="migrating-from-iextendedentityproperties">Migrating from IExtendedEntityProperties<a class="headerlink" href="#migrating-from-iextendedentityproperties" title="Permanent link"> </a></h2>
-<p>Although the Capability system can do everything IEEPs (IExtendedEntityProperties) did and more, the two concepts don&rsquo;t fully match 1:1. This section will explain how to convert existing IEEPs into Capabilities.</p>
-<p>This is a quick list of IEEP concepts and their Capability equivalent:</p>
-<ul>
-<li>Property name/id (<code>String</code>): Capability key (<code>ResourceLocation</code>)</li>
-<li>Registration (<code>EntityConstructing</code>): Attaching (<code>AttachCapabilitiesEvent&lt;Entity&gt;</code>), the real registration of the <code>Capability</code> happens during <code>FMLCommonSetupEvent</code>.</li>
-<li>Tag read/write methods: Does not happen automatically. Attach an <code>ICapabilitySerializable</code> in the event and run the read/write methods from the <code>serializeNBT</code>/<code>deserializeNBT</code>.</li>
-</ul>
-<p>Quick conversion guide:</p>
-<ol>
-<li>Convert the IEEP key/id string into a <code>ResourceLocation</code> (which will use your MODID as a namespace).</li>
-<li>In your handler class (not the class that implements your capability interface), create a field that will hold the Capability instance.</li>
-<li>Change the <code>EntityConstructing</code> event to <code>AttachCapabilitiesEvent</code>, and instead of querying the IEEP, you will want to attach an <code>ICapabilityProvider</code> (probably <code>ICapabilitySerializable</code>, which allows saving/loading from a tag).</li>
-<li>Create a registration method if you don&rsquo;t have one (you may have one where you registered your IEEP&rsquo;s event handlers) and in it, run the capability registration function.</li>
-</ol>
             
         </article>
         

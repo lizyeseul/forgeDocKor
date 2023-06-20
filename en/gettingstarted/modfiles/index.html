@@ -122,9 +122,7 @@
                             
                             <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
                             
-                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
-                            
-                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.20.x" >1.19.x</option>
                             
                         </select>
                     </form>
@@ -1246,7 +1244,7 @@
 <p>The <code>mods.toml</code> file defines the metadata of your mod(s). It also contains additional information that is displayed within the &lsquo;Mods&rsquo; menu and how your mod(s) should be loaded into the game.</p>
 <p>The file uses the <a href="https://toml.io/">Tom&rsquo;s Obvious Minimal Language, or TOML</a>, format. The file must be stored under the <code>META-INF</code> folder in the resource directory of the source set you are using (<code>src/main/resources/META-INF/mods.toml</code> for the <code>main</code> source set). A <code>mods.toml</code> file may look something like this:</p>
 <pre class="highlight"><code class="language-toml">modLoader="javafml"
-loaderVersion="[45,)"
+loaderVersion="[46,)"
 
 license="All Rights Reserved"
 issueTrackerURL="https://github.com/MinecraftForge/MinecraftForge/issues"
@@ -1269,14 +1267,14 @@ showAsResourcePack=false
 [[dependencies.examplemod]]
   modId="forge"
   mandatory=true
-  versionRange="[45,)"
+  versionRange="[46,)"
   ordering="NONE"
   side="BOTH"
 
 [[dependencies.examplemod]]
   modId="minecraft"
   mandatory=true
-  versionRange="[1.19.4]"
+  versionRange="[1.20]"
   ordering="NONE"
   side="BOTH"</code></pre>
 <p><code>mods.toml</code> is broken into three parts: the non-mod-specific properties, which are linked to the mod file; the mod properties, with a section for each mod; and the dependency configurations, with a section for each mod&rsquo;s or mods&rsquo; dependencies. Each of the properties associated with the <code>mods.toml</code> file will be explained below, where <code>required</code> means that a value must be specified or an exception will be thrown.</p>
@@ -1305,7 +1303,7 @@ showAsResourcePack=false
 <td align="center">string</td>
 <td align="center"><strong>mandatory</strong></td>
 <td align="center">The acceptable version range of the language loader, expressed as a <a href="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html">Maven Version Range</a>. For <code>javafml</code> and <code>lowcodefml</code>, the version is the major version of the Forge version.</td>
-<td align="left"><code>"[45,)"</code></td>
+<td align="left"><code>"[46,)"</code></td>
 </tr>
 <tr>
 <td align="left"><code>license</code></td>
@@ -1387,7 +1385,7 @@ modId = "examplemod2"</code></pre>
 <td align="center">string</td>
 <td align="center"><code>"1"</code></td>
 <td align="center">The version of the mod, preferably in a <a href="../versioning/">variation of Maven versioning</a>. When set to <code>${file.jarVersion}</code>, it will be replaced with the value of the <code>Implementation-Version</code> property in the JAR&rsquo;s manifest (displays as <code>0.0NONE</code> in a development environment).</td>
-<td align="left"><code>"1.19.4-1.0.0.0"</code></td>
+<td align="left"><code>"1.20-1.0.0.0"</code></td>
 </tr>
 <tr>
 <td align="left"><code>displayName</code></td>

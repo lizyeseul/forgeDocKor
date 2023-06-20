@@ -122,9 +122,7 @@
                             
                             <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
                             
-                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
-                            
-                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.20.x" >1.19.x</option>
                             
                         </select>
                     </form>
@@ -1255,7 +1253,7 @@
 <p>An example of a mod registering a custom block:</p>
 <pre class="highlight"><code class="language-java">private static final DeferredRegister&lt;Block&gt; BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
-public static final RegistryObject&lt;Block&gt; ROCK_BLOCK = BLOCKS.register("rock", () -&gt; new Block(BlockBehaviour.Properties.of(Material.STONE)));
+public static final RegistryObject&lt;Block&gt; ROCK_BLOCK = BLOCKS.register("rock", () -&gt; new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
 
 public ExampleMod() {
   BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -1353,6 +1351,12 @@ public static final RegistryObject&lt;ManaType&gt; COFFEINUM = RegistryObject.cr
 <p>Any newly created registry should use its associated <a href="#methods-for-registering">registration method</a> to register the associated objects.</p>
 <h3 id="using-newregistryevent">Using NewRegistryEvent<a class="headerlink" href="#using-newregistryevent" title="Permanent link"> </a></h3>
 <p>When using <code>NewRegistryEvent</code>, calling <code>#create</code> with a <code>RegistryBuilder</code> will return a supplier-wrapped registry. The supplied registry can be accessed after <code>NewRegistryEvent</code> has finished posting to the mod event bus. Getting the custom registry from the supplier before <code>NewRegistryEvent</code> finishes firing will result in a <code>null</code> value.</p>
+<h4 id="new-datapack-registries">New Datapack Registries<a class="headerlink" href="#new-datapack-registries" title="Permanent link"> </a></h4>
+<p>New datapack registries can be added using the <code>DataPackRegistryEvent$NewRegistry</code> event on the mod event bus. The registry is created via <code>#dataPackRegistry</code> by passing in the <code>ResourceKey</code> representing the registry name and the <code>Codec</code> used to encode and decode the data from JSON. An optional <code>Codec</code> can be provided to sync the datapack registry to the client.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Datapack Registries cannot be created with <code>DeferredRegister</code>. They can only be created through the event.</p>
+</div>
 <h3 id="with-deferredregister">With DeferredRegister<a class="headerlink" href="#with-deferredregister" title="Permanent link"> </a></h3>
 <p>The <code>DeferredRegister</code> method is once again another wrapper around the above event. Once a <code>DeferredRegister</code> is created in a constant field using the <code>#create</code> overload which takes in the registry name and the mod id, the registry can be constructed via <code>DeferredRegister#makeRegistry</code>. This takes in  a supplied <code>RegistryBuilder</code> containing any additional configurations. The method already populates <code>#setName</code> by default. Since this method can be returned at any time, a supplied version of an <code>IForgeRegistry</code> is returned instead. Getting the custom registry from the supplier before <code>NewRegistryEvent</code> is fired will result in a <code>null</code> value.</p>
 <div class="admonition important">

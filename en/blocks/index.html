@@ -122,9 +122,7 @@
                             
                             <option value="https://lizyeseul.github.io/forgeDocKor/1.18.x" >1.18.x</option>
                             
-                            <option value="https://lizyeseul.github.io/forgeDocKor/1.19.x" selected>1.19.x</option>
-                            
-                            <option value="https://lizyeseul.github.io/forgeDocKor/main" >main</option>
+                            <option value="https://lizyeseul.github.io/forgeDocKor/1.20.x" >1.19.x</option>
                             
                         </select>
                     </form>
@@ -1256,7 +1254,7 @@
 <p>All these methods are <em>chainable</em> which means you can call them in series. See the <code>Blocks</code> class for examples of this.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Blocks have no setter for their <code>CreativeModeTab</code>. This is now handled by the <a href="../items/#creativemodetabevent"><code>CreativeModeTabEvent$BuildContents</code></a> if the block has an associated item (e.g. <code>BlockItem</code>). Furthermore, there is no setter for translation key as it is now generated from the registry name.</p>
+<p>Blocks have no setter for their <code>CreativeModeTab</code>. This is handled by the <a href="../items/#creative-tabs"><code>BuildCreativeModeTabContentsEvent</code></a> if the block has an associated item (e.g. <code>BlockItem</code>). Furthermore, there is no setter for translation key of the block as it is generated from the registry name via <code>Block#getDescriptionId</code>.</p>
 </div>
 <h3 id="advanced-blocks">Advanced Blocks<a class="headerlink" href="#advanced-blocks" title="Permanent link"> </a></h3>
 <p>Of course, the above only allows for extremely basic blocks. If you want to add functionality, like player interaction, a custom class is required. However, the <code>Block</code> class has many methods and unfortunately not every single one can be documented here. See the rest of the pages in this section for things you can do with blocks.</p>
@@ -1268,7 +1266,7 @@
 <p>When a block is registered, <em>only</em> a block is registered. The block does not automatically have an <code>BlockItem</code>. To create a basic <code>BlockItem</code> for a block, one should set the registry name of the <code>BlockItem</code> to that of its <code>Block</code>. Custom subclasses of <code>BlockItem</code> may be used as well. Once an <code>BlockItem</code> has been registered for a block, <code>Block#asItem</code> can be used to retrieve it. <code>Block#asItem</code> will return <code>Items#AIR</code> if there is no <code>BlockItem</code> for the <code>Block</code>, so if you are not certain that there is an <code>BlockItem</code> for the <code>Block</code> you are using, check for if <code>Block#asItem</code> returns <code>Items#AIR</code>.</p>
 </div>
 <h4 id="optionally-registering-blocks">Optionally Registering Blocks<a class="headerlink" href="#optionally-registering-blocks" title="Permanent link"> </a></h4>
-<p>In the past there have been several mods that have allowed users to disable blocks/items in a configuration file. However, you shouldn&rsquo;t do this. There is no limit on the amount of blocks that can be register, so register all blocks in your mod! If you want a block to be disabled through a configuration file, you should disable the crafting recipe. If you would like to disable the block in the creative tab, use a <code>FeatureFlag</code> when building the contents within <a href="../items/#creativemodetabevent"><code>CreativeModeTabEvent$BuildContents</code></a>.</p>
+<p>In the past there have been several mods that have allowed users to disable blocks/items in a configuration file. However, you shouldn&rsquo;t do this. There is no limit on the amount of blocks that can be register, so register all blocks in your mod! If you want a block to be disabled through a configuration file, you should disable the crafting recipe. If you would like to disable the block in the creative tab, use a <code>FeatureFlag</code> when building the contents within <a href="../items/#creative-tabs"><code>BuildCreativeModeTabContentsEvent</code></a>.</p>
 <h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link"> </a></h2>
 <p>For information about block properties, such as those used for vanilla blocks like fences, walls, and many more, see the section on <a href="states/">blockstates</a>.</p>
             
