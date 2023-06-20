@@ -1,6 +1,7 @@
 # Do not edit in PRs below here
 site_name: Forge modding 비공식 한글 문서
-site_url: https://lizyeseul.github.io/forgeDocKor/1.19.x
+site_url: https://lizyeseul.github.io/forgeDocKor
+
 
 markdown_extensions:
   - admonition
@@ -25,11 +26,11 @@ extra:
   types:
     MinecraftForge: latest
     # ForgeGradle: fg-6.x
-  current_version: 1.19.x
+  current_version: 1.20.x
   versions:
     1.18.x: 1.18.x
     1.19.x: 1.19.x
-    main: main
+    1.19.x: 1.20.x
   alternate:
     - name: 한국어
       link: ko/ 
